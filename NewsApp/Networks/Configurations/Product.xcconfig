@@ -1,0 +1,12 @@
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+environmentType = product
+
+apiHost = http:/$()/newsapi.org
+apiPath = /v2/
+googleServiceInfo = GoogleService-Info-Staging
+dynamicLinksDomain = https:/$()/newsapi.org
+appStoreID = 1491476525
+apiKey = ed8a68fe17284d4cb80891ebe096fdab
