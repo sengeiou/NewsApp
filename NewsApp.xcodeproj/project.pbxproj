@@ -37,6 +37,25 @@
 		485BA46824F3B52500D3E61F /* APITarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485BA46724F3B52500D3E61F /* APITarget.swift */; };
 		485BA46B24F3B8B000D3E61F /* SearchConditionsParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485BA46A24F3B8B000D3E61F /* SearchConditionsParams.swift */; };
 		485BA46D24F3B9F600D3E61F /* EncodableUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485BA46C24F3B9F600D3E61F /* EncodableUtils.swift */; };
+		485BA47024F3C0B900D3E61F /* 30173-welcome-screen.json in Resources */ = {isa = PBXBuildFile; fileRef = 485BA46F24F3C0B900D3E61F /* 30173-welcome-screen.json */; };
+		4895F0CB24F4B39F0019091E /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4895F0C624F4B39E0019091E /* MenuViewController.xib */; };
+		4895F0CC24F4B39F0019091E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4895F0C724F4B39E0019091E /* MenuViewController.swift */; };
+		4895F0CD24F4B39F0019091E /* TabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4895F0C924F4B39F0019091E /* TabBarViewController.xib */; };
+		4895F0CE24F4B39F0019091E /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4895F0CA24F4B39F0019091E /* TabBarViewController.swift */; };
+		4895F0D424F4B3F90019091E /* TopHeadlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4895F0D224F4B3F90019091E /* TopHeadlineViewController.swift */; };
+		4895F0D524F4B3F90019091E /* TopHeadlineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4895F0D324F4B3F90019091E /* TopHeadlineViewController.xib */; };
+		4895F0D824F4B4040019091E /* CustomNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4895F0D624F4B4040019091E /* CustomNewsViewController.swift */; };
+		4895F0D924F4B4040019091E /* CustomNewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4895F0D724F4B4040019091E /* CustomNewsViewController.xib */; };
+		4895F0DC24F4B40F0019091E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4895F0DA24F4B40F0019091E /* ProfileViewController.swift */; };
+		4895F0DD24F4B40F0019091E /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4895F0DB24F4B40F0019091E /* ProfileViewController.xib */; };
+		4895F0E124F4B4E20019091E /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4895F0E024F4B4E20019091E /* R.generated.swift */; };
+		4895F0E324F4B7FA0019091E /* TopHeadlineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4895F0E224F4B7FA0019091E /* TopHeadlineViewModel.swift */; };
+		4895F0E524F4B80C0019091E /* TopHeadlineViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4895F0E424F4B80C0019091E /* TopHeadlineViewModelImpl.swift */; };
+		4895F0E824F4BAE40019091E /* ArticleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4895F0E724F4BAE40019091E /* ArticleResponse.swift */; };
+		4895F0EA24F4BAF80019091E /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4895F0E924F4BAF80019091E /* Article.swift */; };
+		4895F0EC24F4BB090019091E /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4895F0EB24F4BB090019091E /* Source.swift */; };
+		4895F0EE24F4BB400019091E /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4895F0ED24F4BB400019091E /* ErrorModel.swift */; };
+		4895F0F324F4BFF60019091E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4895F0F224F4BFF60019091E /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +92,25 @@
 		485BA46724F3B52500D3E61F /* APITarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITarget.swift; sourceTree = "<group>"; };
 		485BA46A24F3B8B000D3E61F /* SearchConditionsParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchConditionsParams.swift; sourceTree = "<group>"; };
 		485BA46C24F3B9F600D3E61F /* EncodableUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodableUtils.swift; sourceTree = "<group>"; };
+		485BA46F24F3C0B900D3E61F /* 30173-welcome-screen.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "30173-welcome-screen.json"; sourceTree = "<group>"; };
+		4895F0C624F4B39E0019091E /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
+		4895F0C724F4B39E0019091E /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		4895F0C924F4B39F0019091E /* TabBarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabBarViewController.xib; sourceTree = "<group>"; };
+		4895F0CA24F4B39F0019091E /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		4895F0D224F4B3F90019091E /* TopHeadlineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHeadlineViewController.swift; sourceTree = "<group>"; };
+		4895F0D324F4B3F90019091E /* TopHeadlineViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopHeadlineViewController.xib; sourceTree = "<group>"; };
+		4895F0D624F4B4040019091E /* CustomNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNewsViewController.swift; sourceTree = "<group>"; };
+		4895F0D724F4B4040019091E /* CustomNewsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomNewsViewController.xib; sourceTree = "<group>"; };
+		4895F0DA24F4B40F0019091E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		4895F0DB24F4B40F0019091E /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		4895F0E024F4B4E20019091E /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		4895F0E224F4B7FA0019091E /* TopHeadlineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHeadlineViewModel.swift; sourceTree = "<group>"; };
+		4895F0E424F4B80C0019091E /* TopHeadlineViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHeadlineViewModelImpl.swift; sourceTree = "<group>"; };
+		4895F0E724F4BAE40019091E /* ArticleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleResponse.swift; sourceTree = "<group>"; };
+		4895F0E924F4BAF80019091E /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		4895F0EB24F4BB090019091E /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
+		4895F0ED24F4BB400019091E /* ErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
+		4895F0F224F4BFF60019091E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		A95F37C2938779B15D144706 /* Pods-NewsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsApp.release.xcconfig"; path = "Target Support Files/Pods-NewsApp/Pods-NewsApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,6 +150,8 @@
 				485BA42324F3AAC200D3E61F /* AppDelegate.swift */,
 				485BA42524F3AAC200D3E61F /* SceneDelegate.swift */,
 				485BA42724F3AAC200D3E61F /* ViewController.swift */,
+				4895F0C424F4B33D0019091E /* ViewController */,
+				485BA46E24F3C0AB00D3E61F /* Resources */,
 				485BA46624F3B3F200D3E61F /* Models */,
 				485BA45224F3AFC400D3E61F /* Common */,
 				485BA43724F3ACE300D3E61F /* Networks */,
@@ -119,6 +159,7 @@
 				485BA42C24F3AAC500D3E61F /* Assets.xcassets */,
 				485BA42E24F3AAC500D3E61F /* LaunchScreen.storyboard */,
 				485BA43124F3AAC500D3E61F /* Info.plist */,
+				4895F0E024F4B4E20019091E /* R.generated.swift */,
 			);
 			path = NewsApp;
 			sourceTree = "<group>";
@@ -202,7 +243,11 @@
 		485BA46624F3B3F200D3E61F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4895F0E624F4BAC90019091E /* ReponseModels */,
 				485BA46924F3B8A500D3E61F /* RequestModels */,
+				4895F0E924F4BAF80019091E /* Article.swift */,
+				4895F0EB24F4BB090019091E /* Source.swift */,
+				4895F0ED24F4BB400019091E /* ErrorModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -213,6 +258,90 @@
 				485BA46A24F3B8B000D3E61F /* SearchConditionsParams.swift */,
 			);
 			path = RequestModels;
+			sourceTree = "<group>";
+		};
+		485BA46E24F3C0AB00D3E61F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				485BA46F24F3C0B900D3E61F /* 30173-welcome-screen.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4895F0C424F4B33D0019091E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4895F0EF24F4BD360019091E /* BaseViewController */,
+				4895F0D124F4B3E70019091E /* Profile */,
+				4895F0D024F4B3DB0019091E /* CustomNews */,
+				4895F0CF24F4B3CA0019091E /* TopHeadline */,
+				4895F0C524F4B39E0019091E /* Menu */,
+				4895F0C824F4B39F0019091E /* Tabbar */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		4895F0C524F4B39E0019091E /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				4895F0C624F4B39E0019091E /* MenuViewController.xib */,
+				4895F0C724F4B39E0019091E /* MenuViewController.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		4895F0C824F4B39F0019091E /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				4895F0CA24F4B39F0019091E /* TabBarViewController.swift */,
+				4895F0C924F4B39F0019091E /* TabBarViewController.xib */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		4895F0CF24F4B3CA0019091E /* TopHeadline */ = {
+			isa = PBXGroup;
+			children = (
+				4895F0D224F4B3F90019091E /* TopHeadlineViewController.swift */,
+				4895F0D324F4B3F90019091E /* TopHeadlineViewController.xib */,
+				4895F0E224F4B7FA0019091E /* TopHeadlineViewModel.swift */,
+				4895F0E424F4B80C0019091E /* TopHeadlineViewModelImpl.swift */,
+			);
+			path = TopHeadline;
+			sourceTree = "<group>";
+		};
+		4895F0D024F4B3DB0019091E /* CustomNews */ = {
+			isa = PBXGroup;
+			children = (
+				4895F0D624F4B4040019091E /* CustomNewsViewController.swift */,
+				4895F0D724F4B4040019091E /* CustomNewsViewController.xib */,
+			);
+			path = CustomNews;
+			sourceTree = "<group>";
+		};
+		4895F0D124F4B3E70019091E /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				4895F0DA24F4B40F0019091E /* ProfileViewController.swift */,
+				4895F0DB24F4B40F0019091E /* ProfileViewController.xib */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		4895F0E624F4BAC90019091E /* ReponseModels */ = {
+			isa = PBXGroup;
+			children = (
+				4895F0E724F4BAE40019091E /* ArticleResponse.swift */,
+			);
+			path = ReponseModels;
+			sourceTree = "<group>";
+		};
+		4895F0EF24F4BD360019091E /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4895F0F224F4BFF60019091E /* BaseViewController.swift */,
+			);
+			path = BaseViewController;
 			sourceTree = "<group>";
 		};
 		AB21B6592537FADA16A8DEB5 /* Pods */ = {
@@ -240,6 +369,7 @@
 			buildConfigurationList = 485BA43424F3AAC500D3E61F /* Build configuration list for PBXNativeTarget "NewsApp" */;
 			buildPhases = (
 				56B67765651F1879F095008D /* [CP] Check Pods Manifest.lock */,
+				4895F0DF24F4B4A70019091E /* R.Swift */,
 				485BA41C24F3AAC200D3E61F /* Sources */,
 				485BA41D24F3AAC200D3E61F /* Frameworks */,
 				485BA41E24F3AAC200D3E61F /* Resources */,
@@ -292,10 +422,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4895F0D524F4B3F90019091E /* TopHeadlineViewController.xib in Resources */,
 				485BA46424F3B19000D3E61F /* Product.xcconfig in Resources */,
 				485BA43024F3AAC500D3E61F /* LaunchScreen.storyboard in Resources */,
 				485BA42D24F3AAC500D3E61F /* Assets.xcassets in Resources */,
+				485BA47024F3C0B900D3E61F /* 30173-welcome-screen.json in Resources */,
+				4895F0DD24F4B40F0019091E /* ProfileViewController.xib in Resources */,
+				4895F0CD24F4B39F0019091E /* TabBarViewController.xib in Resources */,
 				485BA46524F3B19000D3E61F /* Staging.xcconfig in Resources */,
+				4895F0CB24F4B39F0019091E /* MenuViewController.xib in Resources */,
+				4895F0D924F4B4040019091E /* CustomNewsViewController.xib in Resources */,
 				485BA42B24F3AAC200D3E61F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,6 +439,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4895F0DF24F4B4A70019091E /* R.Swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = R.Swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
 		56B67765651F1879F095008D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -349,27 +505,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4895F0D824F4B4040019091E /* CustomNewsViewController.swift in Sources */,
 				485BA44324F3AE0C00D3E61F /* APIOperation.swift in Sources */,
 				485BA44D24F3AF7700D3E61F /* ProviderPlain.swift in Sources */,
+				4895F0EC24F4BB090019091E /* Source.swift in Sources */,
 				485BA44F24F3AF8800D3E61F /* TokenRefresher.swift in Sources */,
+				4895F0E524F4B80C0019091E /* TopHeadlineViewModelImpl.swift in Sources */,
 				485BA43A24F3AD4400D3E61F /* ProviderAPIBasic.swift in Sources */,
 				485BA45624F3AFF000D3E61F /* PrefsImpl.swift in Sources */,
 				485BA46D24F3B9F600D3E61F /* EncodableUtils.swift in Sources */,
 				485BA43D24F3AD7700D3E61F /* APIErrorProcessPlugin.swift in Sources */,
 				485BA45924F3B07200D3E61F /* AuthTarget.swift in Sources */,
+				4895F0F324F4BFF60019091E /* BaseViewController.swift in Sources */,
+				4895F0E324F4B7FA0019091E /* TopHeadlineViewModel.swift in Sources */,
 				485BA42824F3AAC200D3E61F /* ViewController.swift in Sources */,
 				485BA46B24F3B8B000D3E61F /* SearchConditionsParams.swift in Sources */,
+				4895F0D424F4B3F90019091E /* TopHeadlineViewController.swift in Sources */,
+				4895F0EA24F4BAF80019091E /* Article.swift in Sources */,
+				4895F0EE24F4BB400019091E /* ErrorModel.swift in Sources */,
+				4895F0CE24F4B39F0019091E /* TabBarViewController.swift in Sources */,
+				4895F0DC24F4B40F0019091E /* ProfileViewController.swift in Sources */,
 				485BA45C24F3B0C200D3E61F /* StringUtils.swift in Sources */,
 				485BA46824F3B52500D3E61F /* APITarget.swift in Sources */,
 				485BA46024F3B14900D3E61F /* WebviewUrlDef.swift in Sources */,
+				4895F0E124F4B4E20019091E /* R.generated.swift in Sources */,
 				485BA45E24F3B11700D3E61F /* Environment.swift in Sources */,
 				485BA45424F3AFD800D3E61F /* Prefs.swift in Sources */,
 				485BA42424F3AAC200D3E61F /* AppDelegate.swift in Sources */,
+				4895F0CC24F4B39F0019091E /* MenuViewController.swift in Sources */,
 				485BA42624F3AAC200D3E61F /* SceneDelegate.swift in Sources */,
 				485BA43F24F3ADE800D3E61F /* APIError.swift in Sources */,
 				485BA44B24F3AF6900D3E61F /* ProviderAPIWithRefreshToken.swift in Sources */,
 				485BA44924F3AF3600D3E61F /* Provider.swift in Sources */,
 				485BA44524F3AE6E00D3E61F /* AsyncOperation.swift in Sources */,
+				4895F0E824F4BAE40019091E /* ArticleResponse.swift in Sources */,
 				485BA44724F3AEC400D3E61F /* DefaultAlamofireManager.swift in Sources */,
 				485BA44124F3ADF900D3E61F /* APIDecoder.swift in Sources */,
 				485BA45124F3AF9D00D3E61F /* TokenRefresherImpl.swift in Sources */,

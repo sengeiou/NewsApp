@@ -14,12 +14,13 @@ target 'NewsApp' do
   pod 'RxCocoa'
   pod 'NSObject+Rx'
   pod 'RxBiBinding'
-  pod 'Firebase/Analytics'
-  pod 'Firebase/Crashlytics'
+#  pod 'Firebase/Analytics'
+#  pod 'Firebase/Crashlytics'
   pod 'SOTabBar'
   pod 'R.swift'
   pod 'TableFlip'
   pod 'CocoaLumberjack/Swift'
   pod 'SwiftDate', '~> 5.0'
-
+  pod 'lottie-ios'
+  pod 'FoldingCell'
 end
