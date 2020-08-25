@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Semibold.ttf">
+            <string>OpenSans-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TopHeadlineCell" rowHeight="667" id="KGk-i7-Jjw" customClass="TopHeadlineCell" customModule="NewsApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="889"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="889"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gwX-GW-xuq" userLabel="Foreground" customClass="RotatedView" customModule="FoldingCell">
+                        <rect key="frame" x="20" y="7" width="335" height="80"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no_image" translatesAutoresizingMaskIntoConstraints="NO" id="thp-pj-q0j">
+                                <rect key="frame" x="0.0" y="0.0" width="120" height="80"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="thp-pj-q0j" secondAttribute="height" multiplier="1.5:1" id="u8Z-Fd-V9f"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZ1-mF-JgG">
+                                <rect key="frame" x="128" y="0.0" width="207" height="57.5"/>
+                                <string key="text">Image copyrightGetty Images\r\nUS President Donald Trump has warned his fellow Republicans their opponents may \"steal\" November's election, as his party anointed him as their candidate.\r\n\"They're using… [+3938 chars]</string>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Source:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXd-Gb-Dnf">
+                                <rect key="frame" x="128" y="62.5" width="42" height="13.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="4kK-lO-lQu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="11"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CNBC" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZpC-cD-wfu">
+                                <rect key="frame" x="172" y="62.5" width="30.5" height="13.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="11"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gXd-Gb-Dnf" firstAttribute="leading" secondItem="thp-pj-q0j" secondAttribute="trailing" constant="8" id="7zI-bL-IXb"/>
+                            <constraint firstItem="thp-pj-q0j" firstAttribute="top" secondItem="gwX-GW-xuq" secondAttribute="top" id="DoL-qU-4ut"/>
+                            <constraint firstItem="pZ1-mF-JgG" firstAttribute="leading" secondItem="thp-pj-q0j" secondAttribute="trailing" constant="8" id="Fwl-Qh-y2r"/>
+                            <constraint firstItem="ZpC-cD-wfu" firstAttribute="bottom" secondItem="thp-pj-q0j" secondAttribute="bottom" constant="-4" id="Pei-cA-rXg"/>
+                            <constraint firstItem="pZ1-mF-JgG" firstAttribute="top" secondItem="thp-pj-q0j" secondAttribute="top" id="ZAv-4C-Tvu"/>
+                            <constraint firstAttribute="trailing" secondItem="pZ1-mF-JgG" secondAttribute="trailing" id="ZgF-4j-8NT"/>
+                            <constraint firstItem="thp-pj-q0j" firstAttribute="leading" secondItem="gwX-GW-xuq" secondAttribute="leading" id="azG-7g-VDo"/>
+                            <constraint firstAttribute="bottom" secondItem="thp-pj-q0j" secondAttribute="bottom" id="egr-r3-8Cc"/>
+                            <constraint firstItem="gXd-Gb-Dnf" firstAttribute="bottom" secondItem="thp-pj-q0j" secondAttribute="bottom" constant="-4" id="gV3-nM-Ot8"/>
+                            <constraint firstAttribute="height" constant="80" id="rmR-nG-VRe"/>
+                            <constraint firstItem="ZpC-cD-wfu" firstAttribute="leading" secondItem="gXd-Gb-Dnf" secondAttribute="trailing" constant="2" id="xoK-25-3D1"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j0Z-J6-7bx" userLabel="Container">
+                        <rect key="frame" x="20" y="90" width="335" height="479"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We Now Know How Much Trump’s Postmaster General Slowed Down the Mail" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zCa-Kf-cBA">
+                                <rect key="frame" x="8" y="8" width="319" height="79"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By JORDAN WEISSMANN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cw5-4L-ikt">
+                                <rect key="frame" x="8" y="91" width="319" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AUG 24, 20208:47 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m0s-cb-TTx">
+                                <rect key="frame" x="8" y="109.5" width="319" height="12"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2nN-M6-o1b">
+                                <rect key="frame" x="8" y="299.5" width="319" height="124.5"/>
+                                <mutableString key="text">The House Oversight Committee got its chance to grill Postmaster General Louis DeJoy on Monday about his decisions that have bogged down mail delivery and created widespread panic about the upcoming election. While most of the hearing was only faintly illuminating (members spent much of their time rehashing lines of questioning that the Senate covered in its own session Friday, but with more shouting), it did yield at least one important new piece of information, besides the fact that USPS’ boss has no idea how much it costs to mail a postcard: We now know, more or less, how much DeJoy actually slowed the mail down across the country.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no_image" translatesAutoresizingMaskIntoConstraints="NO" id="C2i-eL-d4K">
+                                <rect key="frame" x="8" y="129.5" width="319" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="ILu-w8-ufI"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n1E-nY-gFp">
+                                <rect key="frame" x="8" y="430" width="319" height="41"/>
+                                <color key="backgroundColor" red="0.99607843139999996" green="0.74509803919999995" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="A7a-rD-fnM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="18"/>
+                                <state key="normal" title="LEARN MORE">
+                                    <color key="titleColor" red="0.27058823529999998" green="0.2156862745" blue="0.08235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="actionLearnMore:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="yD2-aY-u6E"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qa3-4z-BtJ">
+                                <rect key="frame" x="8" y="129.5" width="319" height="162"/>
+                                <connections>
+                                    <action selector="actionOpenImage:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="qmP-bP-klm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Cw5-4L-ikt" secondAttribute="trailing" constant="8" id="0L9-oL-qRR"/>
+                            <constraint firstItem="C2i-eL-d4K" firstAttribute="top" secondItem="m0s-cb-TTx" secondAttribute="bottom" constant="8" id="1Eg-aU-moz"/>
+                            <constraint firstItem="Cw5-4L-ikt" firstAttribute="leading" secondItem="j0Z-J6-7bx" secondAttribute="leading" constant="8" id="1nJ-B8-AUT"/>
+                            <constraint firstAttribute="height" constant="479" id="3wq-Jz-n77"/>
+                            <constraint firstAttribute="trailing" secondItem="m0s-cb-TTx" secondAttribute="trailing" constant="8" id="5SQ-GO-dky"/>
+                            <constraint firstItem="m0s-cb-TTx" firstAttribute="top" secondItem="Cw5-4L-ikt" secondAttribute="bottom" constant="4" id="7eD-Y7-2dc"/>
+                            <constraint firstItem="n1E-nY-gFp" firstAttribute="leading" secondItem="j0Z-J6-7bx" secondAttribute="leading" constant="8" id="EoU-xN-1tl"/>
+                            <constraint firstAttribute="trailing" secondItem="C2i-eL-d4K" secondAttribute="trailing" constant="8" id="Fsw-yX-IoS"/>
+                            <constraint firstItem="2nN-M6-o1b" firstAttribute="leading" secondItem="j0Z-J6-7bx" secondAttribute="leading" constant="8" id="MPs-Jf-daQ"/>
+                            <constraint firstItem="Qa3-4z-BtJ" firstAttribute="centerX" secondItem="C2i-eL-d4K" secondAttribute="centerX" id="RVr-aX-AIp"/>
+                            <constraint firstAttribute="trailing" secondItem="zCa-Kf-cBA" secondAttribute="trailing" constant="8" id="Rr8-nt-8eq"/>
+                            <constraint firstItem="Qa3-4z-BtJ" firstAttribute="centerY" secondItem="C2i-eL-d4K" secondAttribute="centerY" id="V3k-LN-rSB"/>
+                            <constraint firstItem="2nN-M6-o1b" firstAttribute="top" secondItem="C2i-eL-d4K" secondAttribute="bottom" constant="8" id="XAd-Xj-MIb"/>
+                            <constraint firstItem="zCa-Kf-cBA" firstAttribute="top" secondItem="j0Z-J6-7bx" secondAttribute="top" constant="8" id="bIa-lp-jvi"/>
+                            <constraint firstItem="Qa3-4z-BtJ" firstAttribute="width" secondItem="C2i-eL-d4K" secondAttribute="width" id="fEv-E9-I0m"/>
+                            <constraint firstAttribute="bottom" secondItem="n1E-nY-gFp" secondAttribute="bottom" constant="8" id="fr0-Y1-gNM"/>
+                            <constraint firstItem="zCa-Kf-cBA" firstAttribute="leading" secondItem="j0Z-J6-7bx" secondAttribute="leading" constant="8" id="jSe-mY-kaM"/>
+                            <constraint firstAttribute="trailing" secondItem="n1E-nY-gFp" secondAttribute="trailing" constant="8" id="l8P-gG-4cJ"/>
+                            <constraint firstItem="Qa3-4z-BtJ" firstAttribute="height" secondItem="C2i-eL-d4K" secondAttribute="height" id="mPl-ZB-GuG"/>
+                            <constraint firstItem="C2i-eL-d4K" firstAttribute="leading" secondItem="j0Z-J6-7bx" secondAttribute="leading" constant="8" id="pag-EJ-FH2"/>
+                            <constraint firstItem="m0s-cb-TTx" firstAttribute="leading" secondItem="j0Z-J6-7bx" secondAttribute="leading" constant="8" id="sx5-aw-oIS"/>
+                            <constraint firstAttribute="trailing" secondItem="2nN-M6-o1b" secondAttribute="trailing" constant="8" id="ujX-u4-aEQ"/>
+                            <constraint firstItem="Cw5-4L-ikt" firstAttribute="top" secondItem="zCa-Kf-cBA" secondAttribute="bottom" constant="4" id="yJD-tx-Uj8"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="gwX-GW-xuq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="cDp-yd-f8b"/>
+                    <constraint firstItem="j0Z-J6-7bx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="90" id="exA-Md-Ddt"/>
+                    <constraint firstItem="gwX-GW-xuq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="fSg-Ac-CA1"/>
+                    <constraint firstAttribute="trailing" secondItem="gwX-GW-xuq" secondAttribute="trailing" constant="20" id="t8n-JZ-E9j"/>
+                    <constraint firstAttribute="trailing" secondItem="j0Z-J6-7bx" secondAttribute="trailing" constant="20" id="uW2-9T-um1"/>
+                    <constraint firstItem="j0Z-J6-7bx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="vGb-4k-xok"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="itemCount">
+                    <integer key="value" value="4"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="color" keyPath="backViewColor">
+                    <color key="value" red="0.0" green="0.82352941180000006" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="containerView" destination="j0Z-J6-7bx" id="Vjp-5S-9fO"/>
+                <outlet property="containerViewTop" destination="exA-Md-Ddt" id="ksr-k1-SYd"/>
+                <outlet property="foregroundView" destination="gwX-GW-xuq" id="1Sr-is-vV8"/>
+                <outlet property="foregroundViewTop" destination="cDp-yd-f8b" id="XmV-gm-e1Z"/>
+            </connections>
+            <point key="canvasLocation" x="47.10144927536232" y="348.54910714285711"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="no_image" width="375" height="225"/>
+    </resources>
+</document>

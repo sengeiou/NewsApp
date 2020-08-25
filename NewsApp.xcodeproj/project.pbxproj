@@ -56,6 +56,13 @@
 		4895F0EC24F4BB090019091E /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4895F0EB24F4BB090019091E /* Source.swift */; };
 		4895F0EE24F4BB400019091E /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4895F0ED24F4BB400019091E /* ErrorModel.swift */; };
 		4895F0F324F4BFF60019091E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4895F0F224F4BFF60019091E /* BaseViewController.swift */; };
+		4895F0F924F4C6680019091E /* TopHeadlineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4895F0F724F4C6680019091E /* TopHeadlineCell.swift */; };
+		4895F0FA24F4C6680019091E /* TopHeadlineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4895F0F824F4C6680019091E /* TopHeadlineCell.xib */; };
+		4895F0FE24F50E920019091E /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4895F0FC24F50E920019091E /* WebViewController.swift */; };
+		4895F0FF24F50E920019091E /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4895F0FD24F50E920019091E /* WebViewController.xib */; };
+		4895F10324F511990019091E /* NVActivityIndicatorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4895F10124F511990019091E /* NVActivityIndicatorPresenter.swift */; };
+		4895F10424F511990019091E /* NVActivityIndicatorViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4895F10224F511990019091E /* NVActivityIndicatorViewable.swift */; };
+		4895F10624F5125F0019091E /* UIColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4895F10524F5125F0019091E /* UIColorUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -111,6 +118,13 @@
 		4895F0EB24F4BB090019091E /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
 		4895F0ED24F4BB400019091E /* ErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
 		4895F0F224F4BFF60019091E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		4895F0F724F4C6680019091E /* TopHeadlineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHeadlineCell.swift; sourceTree = "<group>"; };
+		4895F0F824F4C6680019091E /* TopHeadlineCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopHeadlineCell.xib; sourceTree = "<group>"; };
+		4895F0FC24F50E920019091E /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		4895F0FD24F50E920019091E /* WebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
+		4895F10124F511990019091E /* NVActivityIndicatorPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorPresenter.swift; sourceTree = "<group>"; };
+		4895F10224F511990019091E /* NVActivityIndicatorViewable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorViewable.swift; sourceTree = "<group>"; };
+		4895F10524F5125F0019091E /* UIColorUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorUtils.swift; sourceTree = "<group>"; };
 		A95F37C2938779B15D144706 /* Pods-NewsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsApp.release.xcconfig"; path = "Target Support Files/Pods-NewsApp/Pods-NewsApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -204,6 +218,7 @@
 		485BA45224F3AFC400D3E61F /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				4895F10024F511990019091E /* Extended */,
 				485BA45324F3AFD800D3E61F /* Prefs.swift */,
 				485BA45524F3AFF000D3E61F /* PrefsImpl.swift */,
 				485BA45A24F3B0AE00D3E61F /* Extensions */,
@@ -223,6 +238,7 @@
 		485BA45A24F3B0AE00D3E61F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				4895F10524F5125F0019091E /* UIColorUtils.swift */,
 				485BA45B24F3B0C200D3E61F /* StringUtils.swift */,
 				485BA46C24F3B9F600D3E61F /* EncodableUtils.swift */,
 			);
@@ -271,6 +287,7 @@
 		4895F0C424F4B33D0019091E /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				4895F0FB24F50E720019091E /* WebViewDetailArticle */,
 				4895F0EF24F4BD360019091E /* BaseViewController */,
 				4895F0D124F4B3E70019091E /* Profile */,
 				4895F0D024F4B3DB0019091E /* CustomNews */,
@@ -306,6 +323,7 @@
 				4895F0D324F4B3F90019091E /* TopHeadlineViewController.xib */,
 				4895F0E224F4B7FA0019091E /* TopHeadlineViewModel.swift */,
 				4895F0E424F4B80C0019091E /* TopHeadlineViewModelImpl.swift */,
+				4895F0F424F4C6080019091E /* Cell */,
 			);
 			path = TopHeadline;
 			sourceTree = "<group>";
@@ -342,6 +360,33 @@
 				4895F0F224F4BFF60019091E /* BaseViewController.swift */,
 			);
 			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		4895F0F424F4C6080019091E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4895F0F724F4C6680019091E /* TopHeadlineCell.swift */,
+				4895F0F824F4C6680019091E /* TopHeadlineCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		4895F0FB24F50E720019091E /* WebViewDetailArticle */ = {
+			isa = PBXGroup;
+			children = (
+				4895F0FC24F50E920019091E /* WebViewController.swift */,
+				4895F0FD24F50E920019091E /* WebViewController.xib */,
+			);
+			path = WebViewDetailArticle;
+			sourceTree = "<group>";
+		};
+		4895F10024F511990019091E /* Extended */ = {
+			isa = PBXGroup;
+			children = (
+				4895F10124F511990019091E /* NVActivityIndicatorPresenter.swift */,
+				4895F10224F511990019091E /* NVActivityIndicatorViewable.swift */,
+			);
+			path = Extended;
 			sourceTree = "<group>";
 		};
 		AB21B6592537FADA16A8DEB5 /* Pods */ = {
@@ -423,9 +468,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4895F0D524F4B3F90019091E /* TopHeadlineViewController.xib in Resources */,
+				4895F0FA24F4C6680019091E /* TopHeadlineCell.xib in Resources */,
 				485BA46424F3B19000D3E61F /* Product.xcconfig in Resources */,
 				485BA43024F3AAC500D3E61F /* LaunchScreen.storyboard in Resources */,
 				485BA42D24F3AAC500D3E61F /* Assets.xcassets in Resources */,
+				4895F0FF24F50E920019091E /* WebViewController.xib in Resources */,
 				485BA47024F3C0B900D3E61F /* 30173-welcome-screen.json in Resources */,
 				4895F0DD24F4B40F0019091E /* ProfileViewController.xib in Resources */,
 				4895F0CD24F4B39F0019091E /* TabBarViewController.xib in Resources */,
@@ -532,16 +579,21 @@
 				485BA45E24F3B11700D3E61F /* Environment.swift in Sources */,
 				485BA45424F3AFD800D3E61F /* Prefs.swift in Sources */,
 				485BA42424F3AAC200D3E61F /* AppDelegate.swift in Sources */,
+				4895F0F924F4C6680019091E /* TopHeadlineCell.swift in Sources */,
 				4895F0CC24F4B39F0019091E /* MenuViewController.swift in Sources */,
 				485BA42624F3AAC200D3E61F /* SceneDelegate.swift in Sources */,
 				485BA43F24F3ADE800D3E61F /* APIError.swift in Sources */,
 				485BA44B24F3AF6900D3E61F /* ProviderAPIWithRefreshToken.swift in Sources */,
+				4895F0FE24F50E920019091E /* WebViewController.swift in Sources */,
 				485BA44924F3AF3600D3E61F /* Provider.swift in Sources */,
 				485BA44524F3AE6E00D3E61F /* AsyncOperation.swift in Sources */,
+				4895F10624F5125F0019091E /* UIColorUtils.swift in Sources */,
 				4895F0E824F4BAE40019091E /* ArticleResponse.swift in Sources */,
 				485BA44724F3AEC400D3E61F /* DefaultAlamofireManager.swift in Sources */,
+				4895F10424F511990019091E /* NVActivityIndicatorViewable.swift in Sources */,
 				485BA44124F3ADF900D3E61F /* APIDecoder.swift in Sources */,
 				485BA45124F3AF9D00D3E61F /* TokenRefresherImpl.swift in Sources */,
+				4895F10324F511990019091E /* NVActivityIndicatorPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -688,14 +740,17 @@
 			baseConfigurationReference = 4293AB20B4C596C2D8DD9A7F /* Pods-NewsApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 9X2899GXE9;
 				INFOPLIST_FILE = NewsApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = o00ontcong.NewsApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bsv.testpush;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = TestPushDev;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -706,14 +761,17 @@
 			baseConfigurationReference = A95F37C2938779B15D144706 /* Pods-NewsApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 9X2899GXE9;
 				INFOPLIST_FILE = NewsApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = o00ontcong.NewsApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bsv.testpush;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = TestPushDev;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

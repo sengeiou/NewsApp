@@ -144,7 +144,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 8 images.
+  /// This `R.image` struct is generated, and contains static references to 9 images.
   struct image {
     /// Image `alpha_green_48pt`.
     static let alpha_green_48pt = Rswift.ImageResource(bundle: R.hostingBundle, name: "alpha_green_48pt")
@@ -162,6 +162,8 @@ struct R: Rswift.Validatable {
     static let menu_green = Rswift.ImageResource(bundle: R.hostingBundle, name: "menu_green")
     /// Image `menu_white`.
     static let menu_white = Rswift.ImageResource(bundle: R.hostingBundle, name: "menu_white")
+    /// Image `no_image`.
+    static let no_image = Rswift.ImageResource(bundle: R.hostingBundle, name: "no_image")
 
     #if os(iOS) || os(tvOS)
     /// `UIImage(named: "alpha_green_48pt", bundle: ..., traitCollection: ...)`
@@ -219,6 +221,13 @@ struct R: Rswift.Validatable {
     }
     #endif
 
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "no_image", bundle: ..., traitCollection: ...)`
+    static func no_image(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.no_image, compatibleWith: traitCollection)
+    }
+    #endif
+
     fileprivate init() {}
   }
 
@@ -253,7 +262,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.nib` struct is generated, and contains static references to 5 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 7 nibs.
   struct nib {
     /// Nib `CustomNewsViewController`.
     static let customNewsViewController = _R.nib._CustomNewsViewController()
@@ -263,8 +272,12 @@ struct R: Rswift.Validatable {
     static let profileViewController = _R.nib._ProfileViewController()
     /// Nib `TabBarViewController`.
     static let tabBarViewController = _R.nib._TabBarViewController()
+    /// Nib `TopHeadlineCell`.
+    static let topHeadlineCell = _R.nib._TopHeadlineCell()
     /// Nib `TopHeadlineViewController`.
     static let topHeadlineViewController = _R.nib._TopHeadlineViewController()
+    /// Nib `WebViewController`.
+    static let webViewController = _R.nib._WebViewController()
 
     #if os(iOS) || os(tvOS)
     /// `UINib(name: "CustomNewsViewController", in: bundle)`
@@ -299,10 +312,26 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
+    /// `UINib(name: "TopHeadlineCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.topHeadlineCell) instead")
+    static func topHeadlineCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.topHeadlineCell)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UINib(name: "TopHeadlineViewController", in: bundle)`
     @available(*, deprecated, message: "Use UINib(resource: R.nib.topHeadlineViewController) instead")
     static func topHeadlineViewController(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.topHeadlineViewController)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "WebViewController", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.webViewController) instead")
+    static func webViewController(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.webViewController)
     }
     #endif
 
@@ -322,9 +351,25 @@ struct R: Rswift.Validatable {
       return R.nib.tabBarViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
     }
 
+    static func topHeadlineCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> TopHeadlineCell? {
+      return R.nib.topHeadlineCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? TopHeadlineCell
+    }
+
     static func topHeadlineViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
       return R.nib.topHeadlineViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
     }
+
+    static func webViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+      return R.nib.webViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+    }
+
+    fileprivate init() {}
+  }
+
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
+  struct reuseIdentifier {
+    /// Reuse identifier `TopHeadlineCell`.
+    static let topHeadlineCell: Rswift.ReuseIdentifier<TopHeadlineCell> = Rswift.ReuseIdentifier(identifier: "TopHeadlineCell")
 
     fileprivate init() {}
   }
@@ -345,12 +390,19 @@ struct R: Rswift.Validatable {
 struct _R: Rswift.Validatable {
   static func validate() throws {
     #if os(iOS) || os(tvOS)
+    try nib.validate()
+    #endif
+    #if os(iOS) || os(tvOS)
     try storyboard.validate()
     #endif
   }
 
   #if os(iOS) || os(tvOS)
-  struct nib {
+  struct nib: Rswift.Validatable {
+    static func validate() throws {
+      try _TopHeadlineCell.validate()
+    }
+
     struct _CustomNewsViewController: Rswift.NibResourceType {
       let bundle = R.hostingBundle
       let name = "CustomNewsViewController"
@@ -395,9 +447,40 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
 
+    struct _TopHeadlineCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType, Rswift.Validatable {
+      typealias ReusableType = TopHeadlineCell
+
+      let bundle = R.hostingBundle
+      let identifier = "TopHeadlineCell"
+      let name = "TopHeadlineCell"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> TopHeadlineCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? TopHeadlineCell
+      }
+
+      static func validate() throws {
+        if UIKit.UIImage(named: "no_image", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'no_image' is used in nib 'TopHeadlineCell', but couldn't be loaded.") }
+        if #available(iOS 11.0, tvOS 11.0, *) {
+        }
+      }
+
+      fileprivate init() {}
+    }
+
     struct _TopHeadlineViewController: Rswift.NibResourceType {
       let bundle = R.hostingBundle
       let name = "TopHeadlineViewController"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+
+      fileprivate init() {}
+    }
+
+    struct _WebViewController: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "WebViewController"
 
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView

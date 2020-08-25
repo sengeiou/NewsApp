@@ -23,4 +23,7 @@ target 'NewsApp' do
   pod 'SwiftDate', '~> 5.0'
   pod 'lottie-ios'
   pod 'FoldingCell'
+  pod 'SnapKit', '~> 5.0.0'
+  pod 'NVActivityIndicatorView'
+  
 end
