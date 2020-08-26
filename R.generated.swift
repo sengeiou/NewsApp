@@ -114,20 +114,12 @@ struct R: Rswift.Validatable {
   }
   #endif
 
-  /// This `R.file` struct is generated, and contains static references to 3 files.
+  /// This `R.file` struct is generated, and contains static references to 2 files.
   struct file {
-    /// Resource file `30173-welcome-screen.json`.
-    static let welcomeScreenJson = Rswift.FileResource(bundle: R.hostingBundle, name: "30173-welcome-screen", pathExtension: "json")
     /// Resource file `Product.xcconfig`.
     static let productXcconfig = Rswift.FileResource(bundle: R.hostingBundle, name: "Product", pathExtension: "xcconfig")
     /// Resource file `Staging.xcconfig`.
     static let stagingXcconfig = Rswift.FileResource(bundle: R.hostingBundle, name: "Staging", pathExtension: "xcconfig")
-
-    /// `bundle.url(forResource: "30173-welcome-screen", withExtension: "json")`
-    static func welcomeScreenJson(_: Void = ()) -> Foundation.URL? {
-      let fileResource = R.file.welcomeScreenJson
-      return fileResource.bundle.url(forResource: fileResource)
-    }
 
     /// `bundle.url(forResource: "Product", withExtension: "xcconfig")`
     static func productXcconfig(_: Void = ()) -> Foundation.URL? {
@@ -307,12 +299,18 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.nib` struct is generated, and contains static references to 8 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 11 nibs.
   struct nib {
+    /// Nib `CustomNewsTableViewCell`.
+    static let customNewsTableViewCell = _R.nib._CustomNewsTableViewCell()
     /// Nib `CustomNewsViewController`.
     static let customNewsViewController = _R.nib._CustomNewsViewController()
+    /// Nib `DetailArticleViewController`.
+    static let detailArticleViewController = _R.nib._DetailArticleViewController()
     /// Nib `DetailViewPhotoViewController`.
     static let detailViewPhotoViewController = _R.nib._DetailViewPhotoViewController()
+    /// Nib `FilterArticleViewController`.
+    static let filterArticleViewController = _R.nib._FilterArticleViewController()
     /// Nib `MenuViewController`.
     static let menuViewController = _R.nib._MenuViewController()
     /// Nib `ProfileViewController`.
@@ -327,6 +325,14 @@ struct R: Rswift.Validatable {
     static let webViewController = _R.nib._WebViewController()
 
     #if os(iOS) || os(tvOS)
+    /// `UINib(name: "CustomNewsTableViewCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.customNewsTableViewCell) instead")
+    static func customNewsTableViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.customNewsTableViewCell)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UINib(name: "CustomNewsViewController", in: bundle)`
     @available(*, deprecated, message: "Use UINib(resource: R.nib.customNewsViewController) instead")
     static func customNewsViewController(_: Void = ()) -> UIKit.UINib {
@@ -335,10 +341,26 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
+    /// `UINib(name: "DetailArticleViewController", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.detailArticleViewController) instead")
+    static func detailArticleViewController(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.detailArticleViewController)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UINib(name: "DetailViewPhotoViewController", in: bundle)`
     @available(*, deprecated, message: "Use UINib(resource: R.nib.detailViewPhotoViewController) instead")
     static func detailViewPhotoViewController(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.detailViewPhotoViewController)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "FilterArticleViewController", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.filterArticleViewController) instead")
+    static func filterArticleViewController(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.filterArticleViewController)
     }
     #endif
 
@@ -390,12 +412,24 @@ struct R: Rswift.Validatable {
     }
     #endif
 
+    static func customNewsTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> CustomNewsTableViewCell? {
+      return R.nib.customNewsTableViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CustomNewsTableViewCell
+    }
+
     static func customNewsViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
       return R.nib.customNewsViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
     }
 
+    static func detailArticleViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+      return R.nib.detailArticleViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+    }
+
     static func detailViewPhotoViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
       return R.nib.detailViewPhotoViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+    }
+
+    static func filterArticleViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+      return R.nib.filterArticleViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
     }
 
     static func menuViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
@@ -425,8 +459,10 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 2 reuse identifiers.
   struct reuseIdentifier {
+    /// Reuse identifier `CustomNewsTableViewCell`.
+    static let customNewsTableViewCell: Rswift.ReuseIdentifier<CustomNewsTableViewCell> = Rswift.ReuseIdentifier(identifier: "CustomNewsTableViewCell")
     /// Reuse identifier `TopHeadlineCell`.
     static let topHeadlineCell: Rswift.ReuseIdentifier<TopHeadlineCell> = Rswift.ReuseIdentifier(identifier: "TopHeadlineCell")
 
@@ -459,14 +495,46 @@ struct _R: Rswift.Validatable {
   #if os(iOS) || os(tvOS)
   struct nib: Rswift.Validatable {
     static func validate() throws {
+      try _CustomNewsTableViewCell.validate()
       try _DetailViewPhotoViewController.validate()
       try _TopHeadlineCell.validate()
       try _WebViewController.validate()
     }
 
+    struct _CustomNewsTableViewCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType, Rswift.Validatable {
+      typealias ReusableType = CustomNewsTableViewCell
+
+      let bundle = R.hostingBundle
+      let identifier = "CustomNewsTableViewCell"
+      let name = "CustomNewsTableViewCell"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> CustomNewsTableViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CustomNewsTableViewCell
+      }
+
+      static func validate() throws {
+        if UIKit.UIImage(named: "no_image", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'no_image' is used in nib 'CustomNewsTableViewCell', but couldn't be loaded.") }
+        if #available(iOS 11.0, tvOS 11.0, *) {
+        }
+      }
+
+      fileprivate init() {}
+    }
+
     struct _CustomNewsViewController: Rswift.NibResourceType {
       let bundle = R.hostingBundle
       let name = "CustomNewsViewController"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+
+      fileprivate init() {}
+    }
+
+    struct _DetailArticleViewController: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "DetailArticleViewController"
 
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
@@ -488,6 +556,17 @@ struct _R: Rswift.Validatable {
         if UIKit.UIImage(named: "icon24X", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon24X' is used in nib 'DetailViewPhotoViewController', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {
         }
+      }
+
+      fileprivate init() {}
+    }
+
+    struct _FilterArticleViewController: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "FilterArticleViewController"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
       }
 
       fileprivate init() {}
@@ -567,8 +646,6 @@ struct _R: Rswift.Validatable {
 
       static func validate() throws {
         if UIKit.UIImage(named: "baseline_close_black_48dp", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'baseline_close_black_48dp' is used in nib 'WebViewController', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "btn_back", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'btn_back' is used in nib 'WebViewController', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "btn_next", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'btn_next' is used in nib 'WebViewController', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {
         }
       }

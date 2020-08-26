@@ -26,7 +26,7 @@ class TopHeadlineViewModelImpl: NSObject, TopHeadlineViewModel {
     }
     
     func getTopHeadlineData() {
-        let searchParams = SearchConditionsParams(category: nil, country: "us", language: nil)
+        let searchParams = SearchConditionsParams(category: nil, country: "us", language: nil, q: nil)
         api.request(.top_headlines(searchParams: searchParams))
             .filterSuccessfulStatusCodes()
             .map(ArticleResponse.self, atKeyPath: nil, using: JSONDecoder.decoderISO8601DateAPI(), failsOnEmptyData: true)

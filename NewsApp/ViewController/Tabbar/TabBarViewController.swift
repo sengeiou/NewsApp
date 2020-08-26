@@ -21,7 +21,7 @@ class TabBarViewController: SOTabBarController {
        
         self.delegate = self
         let topHeadline = TopHeadlineViewController()
-        let customNews = CustomNewsViewController(nib: R.nib.customNewsViewController)
+        let customNews = CustomNewsViewController()
         let profile = ProfileViewController(nib: R.nib.profileViewController)
         
         let topHeadlineNav = UINavigationController(rootViewController: topHeadline)

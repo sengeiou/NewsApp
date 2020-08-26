@@ -118,40 +118,39 @@ extension TopHeadlineViewController: UITableViewDataSource{
     func tableView(_: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return cellHeights[indexPath.row]
     }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let cell = tableView.cellForRow(at: indexPath) as! TopHeadlineCell
-        
-        if cell.isAnimating() {
-            return
-        }
-        
-        var duration = 0.0
-        let cellIsCollapsed = cellHeights[indexPath.row] == Const.closeCellHeight
-        if cellIsCollapsed {
-            cellHeights[indexPath.row] = Const.openCellHeight
-            cell.unfold(true, animated: true, completion: nil)
-            duration = 0.5
-        } else {
-            cellHeights[indexPath.row] = Const.closeCellHeight
-            cell.unfold(false, animated: true, completion: nil)
-            duration = 0.8
-        }
-        
-        UIView.animate(withDuration: duration, delay: 0, options: .curveEaseOut, animations: { () -> Void in
-            tableView.beginUpdates()
-            tableView.endUpdates()
-            
-            // fix https://github.com/Ramotion/folding-cell/issues/169
-            if cell.frame.maxY > tableView.frame.maxY {
-                tableView.scrollToRow(at: indexPath, at: UITableView.ScrollPosition.bottom, animated: true)
-            }
-        }, completion: nil)
-    }
+  
 }
 extension TopHeadlineViewController: UITableViewDelegate{
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+          
+          let cell = tableView.cellForRow(at: indexPath) as! TopHeadlineCell
+          
+          if cell.isAnimating() {
+              return
+          }
+          
+          var duration = 0.0
+          let cellIsCollapsed = cellHeights[indexPath.row] == Const.closeCellHeight
+          if cellIsCollapsed {
+              cellHeights[indexPath.row] = Const.openCellHeight
+              cell.unfold(true, animated: true, completion: nil)
+              duration = 0.5
+          } else {
+              cellHeights[indexPath.row] = Const.closeCellHeight
+              cell.unfold(false, animated: true, completion: nil)
+              duration = 0.8
+          }
+          
+          UIView.animate(withDuration: duration, delay: 0, options: .curveEaseOut, animations: { () -> Void in
+              tableView.beginUpdates()
+              tableView.endUpdates()
+              
+              // fix https://github.com/Ramotion/folding-cell/issues/169
+              if cell.frame.maxY > tableView.frame.maxY {
+                  tableView.scrollToRow(at: indexPath, at: UITableView.ScrollPosition.bottom, animated: true)
+              }
+          }, completion: nil)
+      }
 }
 extension TopHeadlineViewController: TopHeadlineCellDelegate{
     func topHeadlineCell(_ topHeadlineCell: TopHeadlineCell, tappedImage article: Article?) {

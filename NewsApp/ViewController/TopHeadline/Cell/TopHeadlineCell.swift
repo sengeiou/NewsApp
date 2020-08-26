@@ -47,10 +47,14 @@ class TopHeadlineCell: FoldingCell {
         publishedAtLabel.text = article?.publishedAt?.toFormat("dd MMM yyyy 'at' HH:mm")
         descriptionLabel.text = article?.articleDescription
         if let urlString = article?.urlToImage, let url = URL(string: urlString) {
-            smallImage.sd_setImage(with: url, placeholderImage: R.image.no_image(), options: .retryFailed , context: [SDWebImageContextOption.imageThumbnailPixelSize : resizeSmallImage], progress: nil, completed: nil)
+            smallImage.sd_setImage(with: url, placeholderImage: R.image.no_image(), options: .queryMemoryDataSync , context: [SDWebImageContextOption.imageThumbnailPixelSize : resizeSmallImage], progress: nil, completed: nil)
             
             bigImage.sd_setImage(with: url, placeholderImage: R.image.no_image(), options: .scaleDownLargeImages, context: nil, progress: nil, completed: nil)
-            
+        } else {
+            smallImage.sd_cancelCurrentImageLoad()
+            smallImage.image = R.image.no_image()
+            bigImage.sd_cancelCurrentImageLoad()
+            bigImage.image = R.image.no_image()
         }
     }
     

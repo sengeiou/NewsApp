@@ -7,24 +7,160 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
+import SearchTextField
 
-class CustomNewsViewController: UIViewController {
+class CustomNewsViewController: BaseViewController, UITextFieldDelegate {
+    
+    // MARK: - protocol properties
+    private var viewModel:CustomNewsViewModel
+    
+    // MARK: - UI Components
+    @IBOutlet weak var searchText: SearchTextField!
+    @IBOutlet weak var tableView: UITableView!
+    private var refreshControl : UIRefreshControl = UIRefreshControl()
+    
+    @IBOutlet weak var emptyLabel: UILabel!
+    
+    // MARK: - internal properties
+    var stringData = ["bitcoin", "apple", "earthquake", "animal"]
 
+    // MARK: - lifecycle
+    init(viewModel:CustomNewsViewModel = CustomNewsViewModelImpl() ) {
+        self.viewModel = viewModel
+        super.init(basicViewModel: viewModel.basicViewModel)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
+        setupData()
+        bindData()
+    }
+    // MARK: - IBAction
+    @IBAction func actionSearch(_ sender: Any) {
+        guard let text = self.searchText.text else {
+            return
+        }
+        if !(stringData.contains(text)) {
+            stringData.append(text)
+            searchText.filterStrings(stringData)
+        }
+        self.searchText.resignFirstResponder()  //if desired
 
-        // Do any additional setup after loading the view.
+        self.searchText.hideResultsList()
+        self.viewModel.searchEverything(text: text)
+
+    }
+    
+    // MARK: - private
+    private func bindData() {
+        searchText.itemSelectionHandler = { (result,index) in
+            let item = result[index]
+            self.searchText.text = item.title
+            self.searchText.resignFirstResponder()  //if desired
+            self.viewModel.searchEverything(text: self.searchText.text)
+        }
+        self.viewModel.listArticles
+            .subscribeOn(MainScheduler.instance)
+            .subscribe(onNext: {[weak self] listArticles in
+                guard let self = self else { return }
+                if listArticles.count == 0 {
+                    self.tableView.isHidden = true
+                } else {
+                    self.tableView.isHidden = false
+                }
+                self.tableView.reloadData()
+            }).disposed(by: rx.disposeBag)
+        
+        self.viewModel.endLoadingAnimation
+            .subscribeOn(MainScheduler.instance)
+            .subscribe(onNext: {[weak self] _ in
+                guard let self = self else { return }
+                self.refreshControl.endRefreshing()
+            }).disposed(by: rx.disposeBag)
+        refreshControl.rx.controlEvent(.valueChanged).subscribe(onNext: { [weak self] in
+            guard let self = self else { return }
+            self.viewModel.searchEverything(text: self.searchText.text)
+        }).disposed(by: rx.disposeBag)
+        self.viewModel.showToast.asObservable().observeOn(MainScheduler.instance).subscribe(onNext: {[weak self] message in
+            guard let self = self else { return }
+            self.view.makeToast(message)
+        }).disposed(by: rx.disposeBag)
+    }
+    private func setupData() {
+        self.showLoading()
+        self.viewModel.searchEverything(text: self.searchText.text)
+    }
+    private func setupTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(R.nib.customNewsTableViewCell)
+        tableView.tableFooterView = UIView()
+        tableView.refreshControl = refreshControl
+        
+    }
+    func setupView(){
+        setupTableView()
+        self.title = "Search Article"
+        searchText.delegate = self
+        searchText.filterStrings(stringData)
+        searchText.theme.bgColor = UIColor (red: 0.9, green: 0.9, blue: 0.9, alpha: 1)
+        searchText.maxResultsListHeight = 160
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+
+        //textField code
+        searchText.resignFirstResponder()  //if desired
+        self.actionSearch(self)
+        return true
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+}
+extension CustomNewsViewController: UITableViewDataSource{
+    
+    func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
+        return viewModel.listArticles.value.count
     }
-    */
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.customNewsTableViewCell, for: indexPath)!
+        let article = self.viewModel.listArticles.value[indexPath.row]
+        cell.bindData(article: article)
+        return cell
+    }
+    
+    func tableView(_: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 96
+    }
+    
 
+}
+extension CustomNewsViewController: UITableViewDelegate{
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+}
+
+extension CustomNewsViewController: TopHeadlineCellDelegate{
+    func topHeadlineCell(_ topHeadlineCell: TopHeadlineCell, tappedImage article: Article?) {
+        guard let urlString = article?.urlToImage else { return }
+        let vc = DetailViewPhotoViewController(viewModel: DetailViewPhotoViewModelImpl(urlString: urlString))
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    func topHeadlineCell(_ topHeadlineCell: TopHeadlineCell, learnMore article: Article?) {
+        if let urlString = article?.url, let url = URL(string: urlString) {
+            let webView = WebViewController(request:URLRequest(url: url))
+            webView.modalPresentationStyle = .fullScreen
+            self.present(webView, animated: true, completion: nil)
+        }
+        
+    }
+    
 }

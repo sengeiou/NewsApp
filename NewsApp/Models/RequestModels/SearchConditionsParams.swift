@@ -9,9 +9,9 @@
 import Foundation
 
 struct SearchConditionsParams: Codable {
-    let category,country,language: String?
+    let category,country,language,q: String?
     enum CodingKeys: String, CodingKey {
-        case category, country, language
+        case category, country, language, q
     }
     func requestParams() -> [String:Any] {
         var dictionary:[String:Any] = [:]
@@ -24,6 +24,9 @@ struct SearchConditionsParams: Codable {
         }
         if let language = language {
             dictionary["language"] = language
+        }
+        if let q = q {
+            dictionary["q"] = q
         }
         return dictionary
     }

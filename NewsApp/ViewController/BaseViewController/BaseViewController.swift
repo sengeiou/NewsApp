@@ -45,7 +45,7 @@ class BaseViewController: UIViewController,NVActivityIndicatorViewable {
     }
     func showLoading(){
         let size = CGSize(width: 30, height: 30)
-        startAnimating(size,message: "Loading...", type: NVActivityIndicatorType.lineScale, color: UIColor.green, fadeInAnimation: nil)
+        startAnimating(size,message: "Loading...", type: NVActivityIndicatorType.lineScale, color: UIColor(hexString: "2ecc87"), fadeInAnimation: nil)
 
     }
     func hideLoading(){

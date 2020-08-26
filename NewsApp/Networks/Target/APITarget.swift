@@ -12,6 +12,8 @@ import Moya
 
 enum APITarget {
     case top_headlines(searchParams: SearchConditionsParams?)
+    case everything(searchParams: SearchConditionsParams?)
+
 }
 
 // MARK: - TargetType Protocol Implementation
@@ -31,6 +33,8 @@ extension APITarget: TargetType {
         switch self {
         case .top_headlines:
             return "top-headlines"
+        case .everything:
+            return "everything"
         }
     }
     
@@ -44,6 +48,10 @@ extension APITarget: TargetType {
     var task: Task {
         switch self {
         case .top_headlines(let searchParams):
+            var dictionary: [String: Any] = searchParams?.toDictionary() ?? [:]
+            dictionary["apiKey"] = apiKey
+            return .requestParameters(parameters: dictionary, encoding: URLEncoding.default)
+        case .everything(searchParams: let searchParams):
             var dictionary: [String: Any] = searchParams?.toDictionary() ?? [:]
             dictionary["apiKey"] = apiKey
             return .requestParameters(parameters: dictionary, encoding: URLEncoding.default)

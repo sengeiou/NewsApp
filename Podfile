@@ -26,5 +26,6 @@ target 'NewsApp' do
   pod 'SnapKit', '~> 5.0.0'
   pod 'NVActivityIndicatorView'
   pod 'Toast-Swift', '~> 5.0.1'
-
+  pod 'SearchTextField'
+  pod 'AAPickerView'
 end

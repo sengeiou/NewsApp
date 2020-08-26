@@ -48,18 +48,6 @@ let api: Provider<APITarget> = ProviderAPIBasic<APITarget>()
 
         }
         
-        let searchParams = SearchConditionsParams(category: nil, country: "us", language: nil)
-        api.request(.top_headlines(searchParams: searchParams))
-            .filterSuccessfulStatusCodes()
-            .subscribe({[weak self] event in
-                guard let self = self else { return }
-                switch event {
-                case .success:
-                    break
-                case .error(_):
-                    break
-                }
-            }).disposed(by: rx.disposeBag)
     }
 
 }
