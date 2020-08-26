@@ -31,9 +31,8 @@
                                     <constraint firstAttribute="width" secondItem="thp-pj-q0j" secondAttribute="height" multiplier="1.5:1" id="u8Z-Fd-V9f"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZ1-mF-JgG">
-                                <rect key="frame" x="128" y="0.0" width="207" height="57.5"/>
-                                <string key="text">Image copyrightGetty Images\r\nUS President Donald Trump has warned his fellow Republicans their opponents may \"steal\" November's election, as his party anointed him as their candidate.\r\n\"They're using… [+3938 chars]</string>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZ1-mF-JgG">
+                                <rect key="frame" x="128" y="0.0" width="207" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -47,8 +46,8 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CNBC" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZpC-cD-wfu">
-                                <rect key="frame" x="172" y="62.5" width="30.5" height="13.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZpC-cD-wfu">
+                                <rect key="frame" x="172" y="76" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="11"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -72,33 +71,32 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j0Z-J6-7bx" userLabel="Container">
                         <rect key="frame" x="20" y="90" width="335" height="479"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We Now Know How Much Trump’s Postmaster General Slowed Down the Mail" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zCa-Kf-cBA">
-                                <rect key="frame" x="8" y="8" width="319" height="79"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zCa-Kf-cBA">
+                                <rect key="frame" x="8" y="8" width="319" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By JORDAN WEISSMANN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cw5-4L-ikt">
-                                <rect key="frame" x="8" y="91" width="319" height="14.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By ..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cw5-4L-ikt">
+                                <rect key="frame" x="8" y="12" width="319" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AUG 24, 20208:47 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m0s-cb-TTx">
-                                <rect key="frame" x="8" y="109.5" width="319" height="12"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m0s-cb-TTx">
+                                <rect key="frame" x="8" y="30.5" width="319" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="10"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2nN-M6-o1b">
-                                <rect key="frame" x="8" y="299.5" width="319" height="124.5"/>
-                                <mutableString key="text">The House Oversight Committee got its chance to grill Postmaster General Louis DeJoy on Monday about his decisions that have bogged down mail delivery and created widespread panic about the upcoming election. While most of the hearing was only faintly illuminating (members spent much of their time rehashing lines of questioning that the Senate covered in its own session Friday, but with more shouting), it did yield at least one important new piece of information, besides the fact that USPS’ boss has no idea how much it costs to mail a postcard: We now know, more or less, how much DeJoy actually slowed the mail down across the country.</mutableString>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2nN-M6-o1b">
+                                <rect key="frame" x="8" y="208.5" width="319" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no_image" translatesAutoresizingMaskIntoConstraints="NO" id="C2i-eL-d4K">
-                                <rect key="frame" x="8" y="129.5" width="319" height="162"/>
+                                <rect key="frame" x="8" y="38.5" width="319" height="162"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="162" id="ILu-w8-ufI"/>
                                 </constraints>
@@ -123,7 +121,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qa3-4z-BtJ">
-                                <rect key="frame" x="8" y="129.5" width="319" height="162"/>
+                                <rect key="frame" x="8" y="38.5" width="319" height="162"/>
                                 <connections>
                                     <action selector="actionOpenImage:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="qmP-bP-klm"/>
                                 </connections>
@@ -172,14 +170,22 @@
                     <integer key="value" value="4"/>
                 </userDefinedRuntimeAttribute>
                 <userDefinedRuntimeAttribute type="color" keyPath="backViewColor">
-                    <color key="value" red="0.0" green="0.82352941180000006" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="value" red="0.96862745098039216" green="0.93725490196078431" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
             <connections>
+                <outlet property="authorLabel" destination="Cw5-4L-ikt" id="2Yz-BY-rku"/>
+                <outlet property="bigImage" destination="C2i-eL-d4K" id="Txu-9c-eJ1"/>
+                <outlet property="bigTitle" destination="zCa-Kf-cBA" id="D3n-Js-utD"/>
                 <outlet property="containerView" destination="j0Z-J6-7bx" id="Vjp-5S-9fO"/>
                 <outlet property="containerViewTop" destination="exA-Md-Ddt" id="ksr-k1-SYd"/>
+                <outlet property="descriptionLabel" destination="2nN-M6-o1b" id="Uoh-Gn-VXb"/>
                 <outlet property="foregroundView" destination="gwX-GW-xuq" id="1Sr-is-vV8"/>
                 <outlet property="foregroundViewTop" destination="cDp-yd-f8b" id="XmV-gm-e1Z"/>
+                <outlet property="publishedAtLabel" destination="m0s-cb-TTx" id="r5d-HI-O0Q"/>
+                <outlet property="smallImage" destination="thp-pj-q0j" id="epD-zH-NeQ"/>
+                <outlet property="smallTitle" destination="pZ1-mF-JgG" id="rl4-5J-ddj"/>
+                <outlet property="sourceLabel" destination="ZpC-cD-wfu" id="5et-C2-NQL"/>
             </connections>
             <point key="canvasLocation" x="47.10144927536232" y="348.54910714285711"/>
         </tableViewCell>

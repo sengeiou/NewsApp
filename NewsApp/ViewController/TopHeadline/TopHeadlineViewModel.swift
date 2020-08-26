@@ -10,6 +10,11 @@ import UIKit
 import RxSwift
 import RxCocoa
 protocol TopHeadlineViewModel: class {
-    
+    var basicViewModel:BasicViewModel { get }
+    var listArticles:BehaviorRelay<[Article]> { get }
+    var endLoadingAnimation: PublishSubject<Void> { get }
+    var showToast: PublishSubject<String> { get }
+
     func getTopHeadlineData()
+
 }

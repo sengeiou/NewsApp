@@ -9,7 +9,7 @@
 import UIKit
 
 struct ArticleResponse: Codable {
-    let status: String
-    let totalResults: Int
-    let articles: [Article]
+    let status: String?
+    let totalResults: Int?
+    let articles: [Article]?
 }

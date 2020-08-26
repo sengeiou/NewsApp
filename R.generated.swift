@@ -144,20 +144,30 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 9 images.
+  /// This `R.image` struct is generated, and contains static references to 14 images.
   struct image {
     /// Image `alpha_green_48pt`.
     static let alpha_green_48pt = Rswift.ImageResource(bundle: R.hostingBundle, name: "alpha_green_48pt")
     /// Image `alpha_white_48pt`.
     static let alpha_white_48pt = Rswift.ImageResource(bundle: R.hostingBundle, name: "alpha_white_48pt")
+    /// Image `baseline_close_black_48dp`.
+    static let baseline_close_black_48dp = Rswift.ImageResource(bundle: R.hostingBundle, name: "baseline_close_black_48dp")
     /// Image `book_green_48pt`.
     static let book_green_48pt = Rswift.ImageResource(bundle: R.hostingBundle, name: "book_green_48pt")
     /// Image `book_white_48pt`.
     static let book_white_48pt = Rswift.ImageResource(bundle: R.hostingBundle, name: "book_white_48pt")
+    /// Image `btn_back`.
+    static let btn_back = Rswift.ImageResource(bundle: R.hostingBundle, name: "btn_back")
+    /// Image `btn_next`.
+    static let btn_next = Rswift.ImageResource(bundle: R.hostingBundle, name: "btn_next")
     /// Image `chat_green`.
     static let chat_green = Rswift.ImageResource(bundle: R.hostingBundle, name: "chat_green")
     /// Image `chat_white`.
     static let chat_white = Rswift.ImageResource(bundle: R.hostingBundle, name: "chat_white")
+    /// Image `icon24Download`.
+    static let icon24Download = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon24Download")
+    /// Image `icon24X`.
+    static let icon24X = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon24X")
     /// Image `menu_green`.
     static let menu_green = Rswift.ImageResource(bundle: R.hostingBundle, name: "menu_green")
     /// Image `menu_white`.
@@ -180,6 +190,13 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "baseline_close_black_48dp", bundle: ..., traitCollection: ...)`
+    static func baseline_close_black_48dp(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.baseline_close_black_48dp, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "book_green_48pt", bundle: ..., traitCollection: ...)`
     static func book_green_48pt(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.book_green_48pt, compatibleWith: traitCollection)
@@ -194,6 +211,20 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "btn_back", bundle: ..., traitCollection: ...)`
+    static func btn_back(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.btn_back, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "btn_next", bundle: ..., traitCollection: ...)`
+    static func btn_next(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.btn_next, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "chat_green", bundle: ..., traitCollection: ...)`
     static func chat_green(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.chat_green, compatibleWith: traitCollection)
@@ -204,6 +235,20 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "chat_white", bundle: ..., traitCollection: ...)`
     static func chat_white(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.chat_white, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon24Download", bundle: ..., traitCollection: ...)`
+    static func icon24Download(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon24Download, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon24X", bundle: ..., traitCollection: ...)`
+    static func icon24X(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon24X, compatibleWith: traitCollection)
     }
     #endif
 
@@ -262,10 +307,12 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.nib` struct is generated, and contains static references to 7 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 8 nibs.
   struct nib {
     /// Nib `CustomNewsViewController`.
     static let customNewsViewController = _R.nib._CustomNewsViewController()
+    /// Nib `DetailViewPhotoViewController`.
+    static let detailViewPhotoViewController = _R.nib._DetailViewPhotoViewController()
     /// Nib `MenuViewController`.
     static let menuViewController = _R.nib._MenuViewController()
     /// Nib `ProfileViewController`.
@@ -284,6 +331,14 @@ struct R: Rswift.Validatable {
     @available(*, deprecated, message: "Use UINib(resource: R.nib.customNewsViewController) instead")
     static func customNewsViewController(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.customNewsViewController)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "DetailViewPhotoViewController", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.detailViewPhotoViewController) instead")
+    static func detailViewPhotoViewController(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.detailViewPhotoViewController)
     }
     #endif
 
@@ -337,6 +392,10 @@ struct R: Rswift.Validatable {
 
     static func customNewsViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
       return R.nib.customNewsViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+    }
+
+    static func detailViewPhotoViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+      return R.nib.detailViewPhotoViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
     }
 
     static func menuViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
@@ -400,7 +459,9 @@ struct _R: Rswift.Validatable {
   #if os(iOS) || os(tvOS)
   struct nib: Rswift.Validatable {
     static func validate() throws {
+      try _DetailViewPhotoViewController.validate()
       try _TopHeadlineCell.validate()
+      try _WebViewController.validate()
     }
 
     struct _CustomNewsViewController: Rswift.NibResourceType {
@@ -409,6 +470,24 @@ struct _R: Rswift.Validatable {
 
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+
+      fileprivate init() {}
+    }
+
+    struct _DetailViewPhotoViewController: Rswift.NibResourceType, Rswift.Validatable {
+      let bundle = R.hostingBundle
+      let name = "DetailViewPhotoViewController"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+
+      static func validate() throws {
+        if UIKit.UIImage(named: "icon24Download", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon24Download' is used in nib 'DetailViewPhotoViewController', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon24X", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon24X' is used in nib 'DetailViewPhotoViewController', but couldn't be loaded.") }
+        if #available(iOS 11.0, tvOS 11.0, *) {
+        }
       }
 
       fileprivate init() {}
@@ -478,12 +557,20 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
 
-    struct _WebViewController: Rswift.NibResourceType {
+    struct _WebViewController: Rswift.NibResourceType, Rswift.Validatable {
       let bundle = R.hostingBundle
       let name = "WebViewController"
 
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+
+      static func validate() throws {
+        if UIKit.UIImage(named: "baseline_close_black_48dp", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'baseline_close_black_48dp' is used in nib 'WebViewController', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "btn_back", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'btn_back' is used in nib 'WebViewController', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "btn_next", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'btn_next' is used in nib 'WebViewController', but couldn't be loaded.") }
+        if #available(iOS 11.0, tvOS 11.0, *) {
+        }
       }
 
       fileprivate init() {}

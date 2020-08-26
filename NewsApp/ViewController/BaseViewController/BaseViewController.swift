@@ -8,9 +8,15 @@
 
 import UIKit
 import NVActivityIndicatorView
+import RxCocoa
+import RxSwift
 
 class BaseViewController: UIViewController,NVActivityIndicatorViewable {
-    init() {
+    private(set) var basicViewModel: BasicViewModel
+
+    init(basicViewModel: BasicViewModel = BasicViewModelImpl()) {
+        self.basicViewModel = basicViewModel
+
         let nibName = String(describing: type(of: self))
         if Bundle.main.path(forResource: nibName, ofType: "nib") != nil {
             super.init(nibName: nibName, bundle: nil)
@@ -21,6 +27,21 @@ class BaseViewController: UIViewController,NVActivityIndicatorViewable {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        bindToBasicObserve()
+
+    }
+    func bindToBasicObserve() {
+        self.basicViewModel.showLoading.observeOn(MainScheduler.instance).subscribe(onNext: {[weak self] (show: Bool) in
+            if show == true {
+                self?.showLoading()
+            } else {
+                self?.hideLoading()
+            }
+            }).disposed(by: rx.disposeBag)
     }
     func showLoading(){
         let size = CGSize(width: 30, height: 30)

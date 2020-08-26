@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class TopHeadlineViewController: BaseViewController {
     
     // MARK: - protocol properties
-    private var viewModel:TopHeadlineViewModel?
+    private var viewModel:TopHeadlineViewModel
     
     // MARK: - UI Components
     @IBOutlet weak var tableView: UITableView!
@@ -21,15 +23,13 @@ class TopHeadlineViewController: BaseViewController {
     enum Const {
         static let closeCellHeight: CGFloat = 90
         static let openCellHeight: CGFloat = 488
-        static let rowsCount = 10
     }
     var cellHeights: [CGFloat] = []
-
+    
     // MARK: - lifecycle
-    init(viewModel:TopHeadlineViewModel? = TopHeadlineViewModelImpl() ) {
-        super.init()
+    init(viewModel:TopHeadlineViewModel = TopHeadlineViewModelImpl() ) {
         self.viewModel = viewModel
-        cellHeights = Array(repeating: Const.closeCellHeight, count: Const.rowsCount)
+        super.init(basicViewModel: viewModel.basicViewModel)
     }
     
     required init?(coder: NSCoder) {
@@ -38,37 +38,55 @@ class TopHeadlineViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        setupData()
+        bindData()
     }
     // MARK: - private
+    private func bindData() {
+        self.viewModel.listArticles
+            .subscribeOn(MainScheduler.instance)
+            .subscribe(onNext: {[weak self] listArticles in
+                guard let self = self else { return }
+                self.cellHeights = Array(repeating: Const.closeCellHeight, count: listArticles.count)
+                self.tableView.reloadData()
+            }).disposed(by: rx.disposeBag)
+        
+        self.viewModel.endLoadingAnimation
+            .subscribeOn(MainScheduler.instance)
+            .subscribe(onNext: {[weak self] _ in
+                guard let self = self else { return }
+                self.refreshControl.endRefreshing()
+            }).disposed(by: rx.disposeBag)
+        refreshControl.rx.controlEvent(.valueChanged).subscribe(onNext: { [weak self] in
+            guard let self = self else { return }
+            self.viewModel.getTopHeadlineData()
+        }).disposed(by: rx.disposeBag)
+        self.viewModel.showToast.asObservable().observeOn(MainScheduler.instance).subscribe(onNext: {[weak self] message in
+            guard let self = self else { return }
+            self.view.makeToast(message)
+        }).disposed(by: rx.disposeBag)
+    }
+    private func setupData() {
+        self.showLoading()
+        self.viewModel.getTopHeadlineData()
+    }
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(R.nib.topHeadlineCell)
         tableView.tableFooterView = UIView()
-        if #available(iOS 10.0, *) {
-            tableView.refreshControl = UIRefreshControl()
-            tableView.refreshControl?.addTarget(self, action: #selector(refreshHandler), for: .valueChanged)
-        }
+        tableView.refreshControl = refreshControl
+        
     }
     func setupView(){
         setupTableView()
         self.title = "Top Headline"
     }
-    // MARK: Actions
-    @objc func refreshHandler() {
-        let deadlineTime = DispatchTime.now() + .seconds(1)
-        DispatchQueue.main.asyncAfter(deadline: deadlineTime, execute: { [weak self] in
-            if #available(iOS 10.0, *) {
-                self?.tableView.refreshControl?.endRefreshing()
-            }
-            self?.tableView.reloadData()
-        })
-    }
 }
 extension TopHeadlineViewController: UITableViewDataSource{
     
     func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
-        return 10
+        return viewModel.listArticles.value.count
     }
     
     func tableView(_: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -92,6 +110,8 @@ extension TopHeadlineViewController: UITableViewDataSource{
         cell.durationsForExpandedState = durations
         cell.durationsForCollapsedState = durations
         cell.delegate = self
+        let article = self.viewModel.listArticles.value[indexPath.row]
+        cell.bindData(article: article)
         return cell
     }
     
@@ -135,13 +155,19 @@ extension TopHeadlineViewController: UITableViewDelegate{
 }
 extension TopHeadlineViewController: TopHeadlineCellDelegate{
     func topHeadlineCell(_ topHeadlineCell: TopHeadlineCell, tappedImage article: Article?) {
-        
+        guard let urlString = article?.urlToImage else { return }
+        let vc = DetailViewPhotoViewController(viewModel: DetailViewPhotoViewModelImpl(urlString: urlString))
+        vc.modalPresentationStyle = .fullScreen 
+        self.present(vc, animated: true, completion: nil)
     }
     
     func topHeadlineCell(_ topHeadlineCell: TopHeadlineCell, learnMore article: Article?) {
-        let webView = WebViewController()
-        self.navigationController?.pushViewController(webView, animated: true)
+        if let urlString = article?.url, let url = URL(string: urlString) {
+            let webView = WebViewController(request:URLRequest(url: url))
+            webView.modalPresentationStyle = .fullScreen
+            self.present(webView, animated: true, completion: nil)
+        }
+        
     }
-    
     
 }
