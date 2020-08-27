@@ -37,6 +37,20 @@
 		485BA46824F3B52500D3E61F /* APITarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485BA46724F3B52500D3E61F /* APITarget.swift */; };
 		485BA46B24F3B8B000D3E61F /* SearchConditionsParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485BA46A24F3B8B000D3E61F /* SearchConditionsParams.swift */; };
 		485BA46D24F3B9F600D3E61F /* EncodableUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485BA46C24F3B9F600D3E61F /* EncodableUtils.swift */; };
+		4882501324F7616E00FEA7CE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4882501124F7616E00FEA7CE /* LoginViewController.swift */; };
+		4882501424F7616E00FEA7CE /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4882501224F7616E00FEA7CE /* LoginViewController.xib */; };
+		4882501724F761D900FEA7CE /* ATCTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4882501624F761D900FEA7CE /* ATCTextField.swift */; };
+		4882501924F7621200FEA7CE /* HelperDarkMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4882501824F7621200FEA7CE /* HelperDarkMode.swift */; };
+		4882501B24F762DA00FEA7CE /* UITextFieldUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4882501A24F762DA00FEA7CE /* UITextFieldUtils.swift */; };
+		4882501D24F7630500FEA7CE /* UIButtonUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4882501C24F7630500FEA7CE /* UIButtonUtils.swift */; };
+		4882501F24F7632000FEA7CE /* UIViewControllerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4882501E24F7632000FEA7CE /* UIViewControllerUtils.swift */; };
+		4882502224F7646F00FEA7CE /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4882502024F7646F00FEA7CE /* SignUpViewController.swift */; };
+		4882502324F7646F00FEA7CE /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4882502124F7646F00FEA7CE /* SignUpViewController.xib */; };
+		4882502524F768E600FEA7CE /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4882502424F768E600FEA7CE /* SignUpViewModel.swift */; };
+		4882502724F7690100FEA7CE /* SignUpViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4882502624F7690100FEA7CE /* SignUpViewModelImpl.swift */; };
+		4882502A24F787D900FEA7CE /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4882502924F787D900FEA7CE /* LoginViewModel.swift */; };
+		4882502C24F787E400FEA7CE /* LoginViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4882502B24F787E400FEA7CE /* LoginViewModelImpl.swift */; };
+		4882502E24F78D5700FEA7CE /* NotificationUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4882502D24F78D5700FEA7CE /* NotificationUtils.swift */; };
 		4895F0CB24F4B39F0019091E /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4895F0C624F4B39E0019091E /* MenuViewController.xib */; };
 		4895F0CC24F4B39F0019091E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4895F0C724F4B39E0019091E /* MenuViewController.swift */; };
 		4895F0CD24F4B39F0019091E /* TabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4895F0C924F4B39F0019091E /* TabBarViewController.xib */; };
@@ -76,8 +90,6 @@
 		48984ADC24F640FF0073107E /* DetailArticleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48984ADA24F640FF0073107E /* DetailArticleViewController.xib */; };
 		48984ADF24F641620073107E /* CustomNewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48984ADD24F641620073107E /* CustomNewsTableViewCell.swift */; };
 		48984AE024F641620073107E /* CustomNewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48984ADE24F641620073107E /* CustomNewsTableViewCell.xib */; };
-		48984AE424F649850073107E /* FilterArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48984AE224F649850073107E /* FilterArticleViewController.swift */; };
-		48984AE524F649850073107E /* FilterArticleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48984AE324F649850073107E /* FilterArticleViewController.xib */; };
 		48984AEA24F65E370073107E /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48984AE924F65E370073107E /* Language.swift */; };
 /* End PBXBuildFile section */
 
@@ -115,6 +127,20 @@
 		485BA46724F3B52500D3E61F /* APITarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITarget.swift; sourceTree = "<group>"; };
 		485BA46A24F3B8B000D3E61F /* SearchConditionsParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchConditionsParams.swift; sourceTree = "<group>"; };
 		485BA46C24F3B9F600D3E61F /* EncodableUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodableUtils.swift; sourceTree = "<group>"; };
+		4882501124F7616E00FEA7CE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		4882501224F7616E00FEA7CE /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		4882501624F761D900FEA7CE /* ATCTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATCTextField.swift; sourceTree = "<group>"; };
+		4882501824F7621200FEA7CE /* HelperDarkMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperDarkMode.swift; sourceTree = "<group>"; };
+		4882501A24F762DA00FEA7CE /* UITextFieldUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldUtils.swift; sourceTree = "<group>"; };
+		4882501C24F7630500FEA7CE /* UIButtonUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonUtils.swift; sourceTree = "<group>"; };
+		4882501E24F7632000FEA7CE /* UIViewControllerUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerUtils.swift; sourceTree = "<group>"; };
+		4882502024F7646F00FEA7CE /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		4882502124F7646F00FEA7CE /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
+		4882502424F768E600FEA7CE /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		4882502624F7690100FEA7CE /* SignUpViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModelImpl.swift; sourceTree = "<group>"; };
+		4882502924F787D900FEA7CE /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		4882502B24F787E400FEA7CE /* LoginViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelImpl.swift; sourceTree = "<group>"; };
+		4882502D24F78D5700FEA7CE /* NotificationUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationUtils.swift; sourceTree = "<group>"; };
 		4895F0C624F4B39E0019091E /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
 		4895F0C724F4B39E0019091E /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		4895F0C924F4B39F0019091E /* TabBarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabBarViewController.xib; sourceTree = "<group>"; };
@@ -154,8 +180,6 @@
 		48984ADA24F640FF0073107E /* DetailArticleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailArticleViewController.xib; sourceTree = "<group>"; };
 		48984ADD24F641620073107E /* CustomNewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNewsTableViewCell.swift; sourceTree = "<group>"; };
 		48984ADE24F641620073107E /* CustomNewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomNewsTableViewCell.xib; sourceTree = "<group>"; };
-		48984AE224F649850073107E /* FilterArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterArticleViewController.swift; sourceTree = "<group>"; };
-		48984AE324F649850073107E /* FilterArticleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterArticleViewController.xib; sourceTree = "<group>"; };
 		48984AE924F65E370073107E /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		A95F37C2938779B15D144706 /* Pods-NewsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsApp.release.xcconfig"; path = "Target Support Files/Pods-NewsApp/Pods-NewsApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -250,6 +274,7 @@
 		485BA45224F3AFC400D3E61F /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				4882501524F761CA00FEA7CE /* Controls */,
 				4895F10024F511990019091E /* Extended */,
 				485BA45324F3AFD800D3E61F /* Prefs.swift */,
 				485BA45524F3AFF000D3E61F /* PrefsImpl.swift */,
@@ -275,6 +300,10 @@
 				485BA45B24F3B0C200D3E61F /* StringUtils.swift */,
 				485BA46C24F3B9F600D3E61F /* EncodableUtils.swift */,
 				48984AC424F60BD90073107E /* UIImageUtils.swift */,
+				4882501A24F762DA00FEA7CE /* UITextFieldUtils.swift */,
+				4882501C24F7630500FEA7CE /* UIButtonUtils.swift */,
+				4882501E24F7632000FEA7CE /* UIViewControllerUtils.swift */,
+				4882502D24F78D5700FEA7CE /* NotificationUtils.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -318,9 +347,42 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		4882500F24F7614200FEA7CE /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				4882501124F7616E00FEA7CE /* LoginViewController.swift */,
+				4882501224F7616E00FEA7CE /* LoginViewController.xib */,
+				4882502924F787D900FEA7CE /* LoginViewModel.swift */,
+				4882502B24F787E400FEA7CE /* LoginViewModelImpl.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		4882501024F7614900FEA7CE /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				4882502024F7646F00FEA7CE /* SignUpViewController.swift */,
+				4882502124F7646F00FEA7CE /* SignUpViewController.xib */,
+				4882502424F768E600FEA7CE /* SignUpViewModel.swift */,
+				4882502624F7690100FEA7CE /* SignUpViewModelImpl.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		4882501524F761CA00FEA7CE /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				4882501624F761D900FEA7CE /* ATCTextField.swift */,
+				4882501824F7621200FEA7CE /* HelperDarkMode.swift */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
 		4895F0C424F4B33D0019091E /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				4882501024F7614900FEA7CE /* SignUp */,
+				4882500F24F7614200FEA7CE /* Login */,
 				48984AC624F61A640073107E /* DetailViewPhotoViewController */,
 				4895F0FB24F50E720019091E /* WebViewDetailArticle */,
 				4895F0EF24F4BD360019091E /* BaseViewController */,
@@ -370,7 +432,6 @@
 				4895F0D724F4B4040019091E /* CustomNewsViewController.xib */,
 				48984AD324F63FB70073107E /* CustomNewsViewModel.swift */,
 				48984AD524F63FC70073107E /* CustomNewsViewModelImpl.swift */,
-				48984AE124F649660073107E /* FilterArticle */,
 				48984AD824F640B70073107E /* DetailArticle */,
 				48984AD724F640840073107E /* Cell */,
 			);
@@ -460,15 +521,6 @@
 			path = DetailArticle;
 			sourceTree = "<group>";
 		};
-		48984AE124F649660073107E /* FilterArticle */ = {
-			isa = PBXGroup;
-			children = (
-				48984AE224F649850073107E /* FilterArticleViewController.swift */,
-				48984AE324F649850073107E /* FilterArticleViewController.xib */,
-			);
-			path = FilterArticle;
-			sourceTree = "<group>";
-		};
 		AB21B6592537FADA16A8DEB5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -551,13 +603,14 @@
 				48984ADC24F640FF0073107E /* DetailArticleViewController.xib in Resources */,
 				4895F0FA24F4C6680019091E /* TopHeadlineCell.xib in Resources */,
 				485BA46424F3B19000D3E61F /* Product.xcconfig in Resources */,
+				4882502324F7646F00FEA7CE /* SignUpViewController.xib in Resources */,
 				48984AD124F622550073107E /* WebViewController.xib in Resources */,
 				485BA43024F3AAC500D3E61F /* LaunchScreen.storyboard in Resources */,
 				485BA42D24F3AAC500D3E61F /* Assets.xcassets in Resources */,
 				48984AE024F641620073107E /* CustomNewsTableViewCell.xib in Resources */,
+				4882501424F7616E00FEA7CE /* LoginViewController.xib in Resources */,
 				4895F0DD24F4B40F0019091E /* ProfileViewController.xib in Resources */,
 				4895F0CD24F4B39F0019091E /* TabBarViewController.xib in Resources */,
-				48984AE524F649850073107E /* FilterArticleViewController.xib in Resources */,
 				485BA46524F3B19000D3E61F /* Staging.xcconfig in Resources */,
 				4895F0CB24F4B39F0019091E /* MenuViewController.xib in Resources */,
 				4895F0D924F4B4040019091E /* CustomNewsViewController.xib in Resources */,
@@ -636,19 +689,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				4895F0D824F4B4040019091E /* CustomNewsViewController.swift in Sources */,
+				4882501D24F7630500FEA7CE /* UIButtonUtils.swift in Sources */,
 				485BA44324F3AE0C00D3E61F /* APIOperation.swift in Sources */,
 				485BA44D24F3AF7700D3E61F /* ProviderPlain.swift in Sources */,
 				4895F0EC24F4BB090019091E /* Source.swift in Sources */,
 				485BA44F24F3AF8800D3E61F /* TokenRefresher.swift in Sources */,
 				48984ACD24F61A770073107E /* DetailViewPhotoViewModel.swift in Sources */,
 				4895F0E524F4B80C0019091E /* TopHeadlineViewModelImpl.swift in Sources */,
+				4882502A24F787D900FEA7CE /* LoginViewModel.swift in Sources */,
+				4882501724F761D900FEA7CE /* ATCTextField.swift in Sources */,
 				485BA43A24F3AD4400D3E61F /* ProviderAPIBasic.swift in Sources */,
 				485BA45624F3AFF000D3E61F /* PrefsImpl.swift in Sources */,
 				485BA46D24F3B9F600D3E61F /* EncodableUtils.swift in Sources */,
 				485BA43D24F3AD7700D3E61F /* APIErrorProcessPlugin.swift in Sources */,
+				4882502E24F78D5700FEA7CE /* NotificationUtils.swift in Sources */,
+				4882502C24F787E400FEA7CE /* LoginViewModelImpl.swift in Sources */,
+				4882502524F768E600FEA7CE /* SignUpViewModel.swift in Sources */,
 				485BA45924F3B07200D3E61F /* AuthTarget.swift in Sources */,
 				4895F0F324F4BFF60019091E /* BaseViewController.swift in Sources */,
 				4895F0E324F4B7FA0019091E /* TopHeadlineViewModel.swift in Sources */,
+				4882502224F7646F00FEA7CE /* SignUpViewController.swift in Sources */,
 				485BA42824F3AAC200D3E61F /* ViewController.swift in Sources */,
 				485BA46B24F3B8B000D3E61F /* SearchConditionsParams.swift in Sources */,
 				48984ACC24F61A770073107E /* DetailViewPhotoViewModelImpl.swift in Sources */,
@@ -663,11 +723,14 @@
 				4895F0DC24F4B40F0019091E /* ProfileViewController.swift in Sources */,
 				48984AC124F5FB280073107E /* AlertModel.swift in Sources */,
 				485BA45C24F3B0C200D3E61F /* StringUtils.swift in Sources */,
-				48984AE424F649850073107E /* FilterArticleViewController.swift in Sources */,
+				4882501324F7616E00FEA7CE /* LoginViewController.swift in Sources */,
 				485BA46824F3B52500D3E61F /* APITarget.swift in Sources */,
 				485BA46024F3B14900D3E61F /* WebviewUrlDef.swift in Sources */,
+				4882501F24F7632000FEA7CE /* UIViewControllerUtils.swift in Sources */,
 				4895F0E124F4B4E20019091E /* R.generated.swift in Sources */,
+				4882501924F7621200FEA7CE /* HelperDarkMode.swift in Sources */,
 				485BA45E24F3B11700D3E61F /* Environment.swift in Sources */,
+				4882502724F7690100FEA7CE /* SignUpViewModelImpl.swift in Sources */,
 				485BA45424F3AFD800D3E61F /* Prefs.swift in Sources */,
 				485BA42424F3AAC200D3E61F /* AppDelegate.swift in Sources */,
 				4895F0F924F4C6680019091E /* TopHeadlineCell.swift in Sources */,
@@ -676,6 +739,7 @@
 				4895F0CC24F4B39F0019091E /* MenuViewController.swift in Sources */,
 				485BA42624F3AAC200D3E61F /* SceneDelegate.swift in Sources */,
 				485BA43F24F3ADE800D3E61F /* APIError.swift in Sources */,
+				4882501B24F762DA00FEA7CE /* UITextFieldUtils.swift in Sources */,
 				485BA44B24F3AF6900D3E61F /* ProviderAPIWithRefreshToken.swift in Sources */,
 				485BA44924F3AF3600D3E61F /* Provider.swift in Sources */,
 				48984AC324F5FB9C0073107E /* BasicViewModelImpl.swift in Sources */,

@@ -40,6 +40,14 @@ class CustomNewsViewController: BaseViewController, UITextFieldDelegate {
         setupData()
         bindData()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+    }
     // MARK: - IBAction
     @IBAction func actionSearch(_ sender: Any) {
         guard let text = self.searchText.text else {
@@ -137,25 +145,8 @@ extension CustomNewsViewController: UITableViewDataSource{
 }
 extension CustomNewsViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let article = self.viewModel.listArticles.value[indexPath.row]
+        let detailVC = DetailArticleViewController(article: article)
+        self.navigationController?.pushViewController(detailVC, animated: true)
     }
-}
-
-extension CustomNewsViewController: TopHeadlineCellDelegate{
-    func topHeadlineCell(_ topHeadlineCell: TopHeadlineCell, tappedImage article: Article?) {
-        guard let urlString = article?.urlToImage else { return }
-        let vc = DetailViewPhotoViewController(viewModel: DetailViewPhotoViewModelImpl(urlString: urlString))
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true, completion: nil)
-    }
-    
-    func topHeadlineCell(_ topHeadlineCell: TopHeadlineCell, learnMore article: Article?) {
-        if let urlString = article?.url, let url = URL(string: urlString) {
-            let webView = WebViewController(request:URLRequest(url: url))
-            webView.modalPresentationStyle = .fullScreen
-            self.present(webView, animated: true, completion: nil)
-        }
-        
-    }
-    
 }

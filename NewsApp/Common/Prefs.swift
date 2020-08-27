@@ -13,8 +13,14 @@ import RxCocoa
 protocol PrefsAccessToken: class {
     func getAccessToken() -> String?
     func saveAccessToken(_ accessToken: String?)
+    func removeAccessToken()
 }
 protocol PrefsRefreshToken: class {
     func getRefreshToken() -> String?
     func saveRefreshToken(_ accessToken: String?)
+}
+protocol PrefsAuthentication: class {
+    func getAuthentication(key: String) -> String?
+    func saveAuthentication(key: String, value: String)
+    func clearAuthentication()
 }

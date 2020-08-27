@@ -136,12 +136,14 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 14 images.
+  /// This `R.image` struct is generated, and contains static references to 16 images.
   struct image {
     /// Image `alpha_green_48pt`.
     static let alpha_green_48pt = Rswift.ImageResource(bundle: R.hostingBundle, name: "alpha_green_48pt")
     /// Image `alpha_white_48pt`.
     static let alpha_white_48pt = Rswift.ImageResource(bundle: R.hostingBundle, name: "alpha_white_48pt")
+    /// Image `arrow-back-icon`.
+    static let arrowBackIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "arrow-back-icon")
     /// Image `baseline_close_black_48dp`.
     static let baseline_close_black_48dp = Rswift.ImageResource(bundle: R.hostingBundle, name: "baseline_close_black_48dp")
     /// Image `book_green_48pt`.
@@ -160,6 +162,8 @@ struct R: Rswift.Validatable {
     static let icon24Download = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon24Download")
     /// Image `icon24X`.
     static let icon24X = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon24X")
+    /// Image `logo`.
+    static let logo = Rswift.ImageResource(bundle: R.hostingBundle, name: "logo")
     /// Image `menu_green`.
     static let menu_green = Rswift.ImageResource(bundle: R.hostingBundle, name: "menu_green")
     /// Image `menu_white`.
@@ -178,6 +182,13 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "alpha_white_48pt", bundle: ..., traitCollection: ...)`
     static func alpha_white_48pt(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.alpha_white_48pt, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "arrow-back-icon", bundle: ..., traitCollection: ...)`
+    static func arrowBackIcon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.arrowBackIcon, compatibleWith: traitCollection)
     }
     #endif
 
@@ -245,6 +256,13 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "logo", bundle: ..., traitCollection: ...)`
+    static func logo(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.logo, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "menu_green", bundle: ..., traitCollection: ...)`
     static func menu_green(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.menu_green, compatibleWith: traitCollection)
@@ -299,7 +317,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.nib` struct is generated, and contains static references to 11 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 12 nibs.
   struct nib {
     /// Nib `CustomNewsTableViewCell`.
     static let customNewsTableViewCell = _R.nib._CustomNewsTableViewCell()
@@ -309,12 +327,14 @@ struct R: Rswift.Validatable {
     static let detailArticleViewController = _R.nib._DetailArticleViewController()
     /// Nib `DetailViewPhotoViewController`.
     static let detailViewPhotoViewController = _R.nib._DetailViewPhotoViewController()
-    /// Nib `FilterArticleViewController`.
-    static let filterArticleViewController = _R.nib._FilterArticleViewController()
+    /// Nib `LoginViewController`.
+    static let loginViewController = _R.nib._LoginViewController()
     /// Nib `MenuViewController`.
     static let menuViewController = _R.nib._MenuViewController()
     /// Nib `ProfileViewController`.
     static let profileViewController = _R.nib._ProfileViewController()
+    /// Nib `SignUpViewController`.
+    static let signUpViewController = _R.nib._SignUpViewController()
     /// Nib `TabBarViewController`.
     static let tabBarViewController = _R.nib._TabBarViewController()
     /// Nib `TopHeadlineCell`.
@@ -357,10 +377,10 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
-    /// `UINib(name: "FilterArticleViewController", in: bundle)`
-    @available(*, deprecated, message: "Use UINib(resource: R.nib.filterArticleViewController) instead")
-    static func filterArticleViewController(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.filterArticleViewController)
+    /// `UINib(name: "LoginViewController", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.loginViewController) instead")
+    static func loginViewController(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.loginViewController)
     }
     #endif
 
@@ -377,6 +397,14 @@ struct R: Rswift.Validatable {
     @available(*, deprecated, message: "Use UINib(resource: R.nib.profileViewController) instead")
     static func profileViewController(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.profileViewController)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "SignUpViewController", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.signUpViewController) instead")
+    static func signUpViewController(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.signUpViewController)
     }
     #endif
 
@@ -428,8 +456,8 @@ struct R: Rswift.Validatable {
       return R.nib.detailViewPhotoViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
     }
 
-    static func filterArticleViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-      return R.nib.filterArticleViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+    static func loginViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+      return R.nib.loginViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
     }
 
     static func menuViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
@@ -438,6 +466,10 @@ struct R: Rswift.Validatable {
 
     static func profileViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
       return R.nib.profileViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+    }
+
+    static func signUpViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+      return R.nib.signUpViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
     }
 
     static func tabBarViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
@@ -496,7 +528,9 @@ struct _R: Rswift.Validatable {
   struct nib: Rswift.Validatable {
     static func validate() throws {
       try _CustomNewsTableViewCell.validate()
+      try _DetailArticleViewController.validate()
       try _DetailViewPhotoViewController.validate()
+      try _SignUpViewController.validate()
       try _TopHeadlineCell.validate()
       try _WebViewController.validate()
     }
@@ -532,12 +566,18 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
 
-    struct _DetailArticleViewController: Rswift.NibResourceType {
+    struct _DetailArticleViewController: Rswift.NibResourceType, Rswift.Validatable {
       let bundle = R.hostingBundle
       let name = "DetailArticleViewController"
 
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+
+      static func validate() throws {
+        if UIKit.UIImage(named: "no_image", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'no_image' is used in nib 'DetailArticleViewController', but couldn't be loaded.") }
+        if #available(iOS 11.0, tvOS 11.0, *) {
+        }
       }
 
       fileprivate init() {}
@@ -561,9 +601,9 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
 
-    struct _FilterArticleViewController: Rswift.NibResourceType {
+    struct _LoginViewController: Rswift.NibResourceType {
       let bundle = R.hostingBundle
-      let name = "FilterArticleViewController"
+      let name = "LoginViewController"
 
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
@@ -589,6 +629,23 @@ struct _R: Rswift.Validatable {
 
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+
+      fileprivate init() {}
+    }
+
+    struct _SignUpViewController: Rswift.NibResourceType, Rswift.Validatable {
+      let bundle = R.hostingBundle
+      let name = "SignUpViewController"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+
+      static func validate() throws {
+        if UIKit.UIImage(named: "arrow-back-icon", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'arrow-back-icon' is used in nib 'SignUpViewController', but couldn't be loaded.") }
+        if #available(iOS 11.0, tvOS 11.0, *) {
+        }
       }
 
       fileprivate init() {}

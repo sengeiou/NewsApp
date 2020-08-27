@@ -9,10 +9,14 @@
 import Foundation
 import RxSwift
 import CocoaLumberjack
+import KeychainAccess
 
 class PrefsImpl: NSObject {
     static let `default`: PrefsImpl = PrefsImpl()
     let defaults: UserDefaults
+    private let keychain: Keychain = Keychain().accessibility(.alwaysThisDeviceOnly)
+    private let identifyApp: String = "Hasagi-pie-"
+
     init(defaults: UserDefaults = UserDefaults.standard) {
         self.defaults = defaults
     }
@@ -59,6 +63,9 @@ extension PrefsImpl: PrefsAccessToken {
         }
         defaults.synchronize()
     }
+    func removeAccessToken() {
+        defaults.removeObject(forKey: "accessToken")
+    }
 }
 extension PrefsImpl: PrefsRefreshToken {
     public func getRefreshToken() -> String? {
@@ -72,5 +79,18 @@ extension PrefsImpl: PrefsRefreshToken {
             defaults.removeObject(forKey: "refreshToken")
         }
         defaults.synchronize()
+    }
+}
+extension PrefsImpl: PrefsAuthentication {
+    func getAuthentication(key: String) -> String? {
+        return (try? keychain.get(key))
+
+    }
+    
+    func saveAuthentication(key: String, value: String) {
+        try? keychain.set(value, key: key)
+    }
+    func clearAuthentication() {
+        try? keychain.removeAll()
     }
 }

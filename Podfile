@@ -28,4 +28,6 @@ target 'NewsApp' do
   pod 'Toast-Swift', '~> 5.0.1'
   pod 'SearchTextField'
   pod 'AAPickerView'
+  pod 'KeychainAccess'
+
 end

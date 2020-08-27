@@ -6,6 +6,7 @@ PODS:
     - CocoaLumberjack/Core
   - FLEX (4.1.1)
   - FoldingCell (5.0.2)
+  - KeychainAccess (4.2.0)
   - lottie-ios (3.1.8)
   - MBProgressHUD (1.1.0)
   - Moya/Core (14.0.0):
@@ -46,6 +47,7 @@ DEPENDENCIES:
   - CocoaLumberjack/Swift
   - FLEX
   - FoldingCell
+  - KeychainAccess
   - lottie-ios
   - MBProgressHUD (~> 1.1.0)
   - Moya/RxSwift
@@ -70,6 +72,7 @@ SPEC REPOS:
     - CocoaLumberjack
     - FLEX
     - FoldingCell
+    - KeychainAccess
     - lottie-ios
     - MBProgressHUD
     - Moya
@@ -96,6 +99,7 @@ SPEC CHECKSUMS:
   CocoaLumberjack: bd155f2dd06c0e0b03f876f7a3ee55693122ec94
   FLEX: 81096107977a09836eb440173010ceeef01105d6
   FoldingCell: f92eb5fb9842319e7cd08c71533c98408b785099
+  KeychainAccess: 3f760109aa99b05d0f231e28b22642da7153e38a
   lottie-ios: 48fac6be217c76937e36e340e2d09cf7b10b7f5f
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
@@ -116,6 +120,6 @@ SPEC CHECKSUMS:
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
   TPKeyboardAvoiding: 7c2187e2338052b2c5be4a8052f297fdb124e261
 
-PODFILE CHECKSUM: 1fb540dc27be43deba4d0812b8a374612d961bba
+PODFILE CHECKSUM: 3f47a268cdea7c73374d7571fe20a91a83f4a11e
 
 COCOAPODS: 1.10.0.beta.2

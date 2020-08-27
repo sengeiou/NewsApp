@@ -8,7 +8,6 @@
 
 import UIKit
 import FoldingCell
-import SDWebImage
 import SwiftDate
 import SDWebImage
 import CocoaLumberjack

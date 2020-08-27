@@ -22,14 +22,18 @@ class TabBarViewController: SOTabBarController {
         self.delegate = self
         let topHeadline = TopHeadlineViewController()
         let customNews = CustomNewsViewController()
-        let profile = ProfileViewController(nib: R.nib.profileViewController)
+        let profile = LoginViewController()
         
         let topHeadlineNav = UINavigationController(rootViewController: topHeadline)
+        let customNewsNav = UINavigationController(rootViewController: customNews)
+
+        let profileNav = UINavigationController(rootViewController: profile)
+
         topHeadlineNav.tabBarItem = UITabBarItem(title: "Top Headline", image: UIImage(named: "book_green_48pt"), selectedImage: UIImage(named: "book_white_48pt"))
-        customNews.tabBarItem = UITabBarItem(title: "Custom News", image: UIImage(named: "chat_green"), selectedImage: UIImage(named: "chat_white"))
-        profile.tabBarItem = UITabBarItem(title: "profile", image: UIImage(named: "menu_green"), selectedImage: UIImage(named: "menu_white"))
+        customNewsNav.tabBarItem = UITabBarItem(title: "Custom News", image: UIImage(named: "chat_green"), selectedImage: UIImage(named: "chat_white"))
+        profileNav.tabBarItem = UITabBarItem(title: "profile", image: UIImage(named: "menu_green"), selectedImage: UIImage(named: "menu_white"))
         
-        viewControllers = [topHeadlineNav, customNews, profile]
+        viewControllers = [topHeadlineNav, customNewsNav, profileNav]
     }
     
 }
