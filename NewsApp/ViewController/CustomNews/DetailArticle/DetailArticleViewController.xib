@@ -32,7 +32,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BNa-b4-KJz">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="747"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XXt-hm-big">
                             <rect key="frame" x="0.0" y="0.0" width="415" height="309"/>
@@ -73,25 +73,6 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mLy-EZ-ImR">
-                                    <rect key="frame" x="40" y="248" width="335" height="41"/>
-                                    <color key="backgroundColor" red="0.99607843139999996" green="0.74509803919999995" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="41" id="UeN-3d-S9V"/>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="18"/>
-                                    <state key="normal" title="LEARN MORE">
-                                        <color key="titleColor" red="0.27058823529999998" green="0.2156862745" blue="0.08235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </state>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                            <integer key="value" value="10"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
-                                    <connections>
-                                        <action selector="actionLearnMore:" destination="-1" eventType="touchUpInside" id="2pU-Ka-Rzp"/>
-                                    </connections>
-                                </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
@@ -101,12 +82,9 @@
                                 <constraint firstItem="Ip3-g5-Ueg" firstAttribute="leading" secondItem="XXt-hm-big" secondAttribute="leading" constant="20" id="F6j-Xd-T6X"/>
                                 <constraint firstItem="ggG-tF-hex" firstAttribute="leading" secondItem="XXt-hm-big" secondAttribute="leading" constant="20" id="IJc-di-IiA"/>
                                 <constraint firstAttribute="trailing" secondItem="N7E-eT-7Lt" secondAttribute="trailing" constant="20" id="MAk-Jq-OeC"/>
-                                <constraint firstItem="mLy-EZ-ImR" firstAttribute="top" secondItem="N7E-eT-7Lt" secondAttribute="bottom" constant="20" id="NBg-dg-Cbj"/>
-                                <constraint firstItem="mLy-EZ-ImR" firstAttribute="leading" secondItem="XXt-hm-big" secondAttribute="leading" constant="40" id="SY6-GT-Xbe"/>
                                 <constraint firstItem="ggG-tF-hex" firstAttribute="top" secondItem="Eq0-zv-Caa" secondAttribute="bottom" constant="4" id="bg2-8Q-ZLM"/>
                                 <constraint firstAttribute="trailing" secondItem="LSi-4P-6oL" secondAttribute="trailing" constant="20" id="jTq-XA-tAi"/>
                                 <constraint firstItem="Eq0-zv-Caa" firstAttribute="leading" secondItem="XXt-hm-big" secondAttribute="leading" constant="20" id="lKZ-a5-LkN"/>
-                                <constraint firstAttribute="trailing" secondItem="mLy-EZ-ImR" secondAttribute="trailing" constant="40" id="ngS-vz-MKd"/>
                                 <constraint firstItem="FuI-7n-qWe" firstAttribute="leading" secondItem="XXt-hm-big" secondAttribute="leading" constant="20" id="og8-Wi-9ny"/>
                                 <constraint firstAttribute="trailing" secondItem="ggG-tF-hex" secondAttribute="trailing" constant="20" id="oy5-yN-ha3"/>
                                 <constraint firstItem="N7E-eT-7Lt" firstAttribute="top" secondItem="FuI-7n-qWe" secondAttribute="bottom" constant="8" id="rLY-qV-pHb"/>
@@ -126,15 +104,37 @@
                         <constraint firstAttribute="trailing" secondItem="XXt-hm-big" secondAttribute="trailing" id="qj2-Vq-ObU"/>
                     </constraints>
                 </scrollView>
+                <button clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mLy-EZ-ImR">
+                    <rect key="frame" x="40" y="791" width="334" height="41"/>
+                    <color key="backgroundColor" red="0.99607843139999996" green="0.74509803919999995" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="41" id="UeN-3d-S9V"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="18"/>
+                    <state key="normal" title="LEARN MORE">
+                        <color key="titleColor" red="0.27058823529999998" green="0.2156862745" blue="0.08235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="actionLearnMore:" destination="-1" eventType="touchUpInside" id="2pU-Ka-Rzp"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="BNa-b4-KJz" secondAttribute="bottom" id="C49-Uc-sta"/>
                 <constraint firstItem="XXt-hm-big" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="1.00242" id="DDN-Kg-UHC"/>
                 <constraint firstItem="XXt-hm-big" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.344866" id="I7j-83-Cf2"/>
                 <constraint firstItem="BNa-b4-KJz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Kk5-yX-lWb"/>
+                <constraint firstItem="mLy-EZ-ImR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="QPQ-1B-3CO"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="BNa-b4-KJz" secondAttribute="trailing" id="TmH-dD-M9O"/>
+                <constraint firstItem="mLy-EZ-ImR" firstAttribute="top" secondItem="BNa-b4-KJz" secondAttribute="bottom" id="ahd-vD-4fF"/>
                 <constraint firstItem="BNa-b4-KJz" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="bBM-gR-GtM"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mLy-EZ-ImR" secondAttribute="trailing" constant="40" id="jMZ-Ly-kZn"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="mLy-EZ-ImR" secondAttribute="bottom" constant="30" id="tPp-aB-w4Q"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="131.8840579710145" y="118.52678571428571"/>

@@ -25,6 +25,10 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>Here write description why you accessing photo library</string>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>Here write description why you accessing photo library</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
