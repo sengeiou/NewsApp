@@ -14,11 +14,13 @@ PODS:
   - Moya/RxSwift (14.0.0):
     - Moya/Core
     - RxSwift (~> 5.0)
+  - Nimble (8.1.1)
   - "NSObject+Rx (5.1.0)":
     - RxSwift (~> 5.1)
   - NVActivityIndicatorView (5.0.1):
     - NVActivityIndicatorView/Base (= 5.0.1)
   - NVActivityIndicatorView/Base (5.0.1)
+  - Quick (3.0.0)
   - R.swift (5.2.2):
     - R.swift.Library (~> 5.2.0)
   - R.swift.Library (5.2.0)
@@ -51,8 +53,10 @@ DEPENDENCIES:
   - lottie-ios
   - MBProgressHUD (~> 1.1.0)
   - Moya/RxSwift
+  - Nimble
   - "NSObject+Rx"
   - NVActivityIndicatorView
+  - Quick
   - R.swift
   - RxBiBinding
   - RxCocoa
@@ -76,8 +80,10 @@ SPEC REPOS:
     - lottie-ios
     - MBProgressHUD
     - Moya
+    - Nimble
     - "NSObject+Rx"
     - NVActivityIndicatorView
+    - Quick
     - R.swift
     - R.swift.Library
     - RxBiBinding
@@ -103,8 +109,10 @@ SPEC CHECKSUMS:
   lottie-ios: 48fac6be217c76937e36e340e2d09cf7b10b7f5f
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  Nimble: 5f8a2fb6fa343a7242dfdd9d42f7267419d464b2
   "NSObject+Rx": fa6bbcc1ab1faa06b01466bc09b1e0692bbc5946
   NVActivityIndicatorView: 738e843cb8924e9e4fc3e559d0728031624bf860
+  Quick: 6d9559f40647bc4d510103842ef2fdd882d753e2
   R.swift: 7c52cdc57a66840ffe6cbd8a823d732059d42a32
   R.swift.Library: 5ba4f1631300caf9a4d890186930da85d540769d
   RxBiBinding: 6cc627d9e0dfa0b2ce8470cd7e539f3cb100f782
@@ -120,6 +128,6 @@ SPEC CHECKSUMS:
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
   TPKeyboardAvoiding: 7c2187e2338052b2c5be4a8052f297fdb124e261
 
-PODFILE CHECKSUM: 3f47a268cdea7c73374d7571fe20a91a83f4a11e
+PODFILE CHECKSUM: be61c941ec831207de21c0a8edcb99e08b210678
 
 COCOAPODS: 1.10.0.beta.2

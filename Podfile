@@ -31,3 +31,8 @@ target 'NewsApp' do
   pod 'KeychainAccess'
 
 end
+target 'NewsAppTests' do
+  inherit! :search_paths
+    pod 'Quick'
+    pod 'Nimble'
+end
