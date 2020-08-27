@@ -46,8 +46,8 @@ class TopHeadlineCell: FoldingCell {
         authorLabel.text = "By " + (article?.author ?? "...")
         publishedAtLabel.text = article?.publishedAt?.toFormat("dd MMM yyyy 'at' HH:mm")
         descriptionLabel.text = article?.articleDescription
-        if let urlString = article?.urlToImage, let url = URL(string: urlString) {
-            smallImage.sd_setImage(with: url, placeholderImage: R.image.no_image(), options: .queryMemoryDataSync , context: [SDWebImageContextOption.imageThumbnailPixelSize : resizeSmallImage], progress: nil, completed: nil)
+        if let urlString = article?.urlToImage, let urlThumbnail = URL(string: urlString + "?thumbnail"),let url = URL(string: urlString) {
+            smallImage.sd_setImage(with: urlThumbnail, placeholderImage: R.image.no_image(), options: .queryMemoryDataSync , context: [SDWebImageContextOption.imageThumbnailPixelSize : resizeSmallImage], progress: nil, completed: nil)
             
             bigImage.sd_setImage(with: url, placeholderImage: R.image.no_image(), options: .scaleDownLargeImages, context: nil, progress: nil, completed: nil)
         } else {

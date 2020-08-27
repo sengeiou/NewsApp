@@ -15,7 +15,9 @@ protocol CustomNewsViewModel: class {
     var listArticles:BehaviorRelay<[Article]> { get }
     var endLoadingAnimation: PublishSubject<Void> { get }
     var showToast: PublishSubject<String> { get }
-
+    var stringData : [String] {get}
     func searchEverything(text: String?)
+    func getTopHeadlineData()
+    func addToStringData(text: String)
 
 }

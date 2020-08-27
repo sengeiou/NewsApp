@@ -24,7 +24,6 @@ class CustomNewsViewController: BaseViewController, UITextFieldDelegate {
     @IBOutlet weak var emptyLabel: UILabel!
     
     // MARK: - internal properties
-    var stringData = ["bitcoin", "apple", "earthquake", "animal"]
 
     // MARK: - lifecycle
     init(viewModel:CustomNewsViewModel = CustomNewsViewModelImpl() ) {
@@ -46,24 +45,21 @@ class CustomNewsViewController: BaseViewController, UITextFieldDelegate {
         guard let text = self.searchText.text else {
             return
         }
-        if !(stringData.contains(text)) {
-            stringData.append(text)
-            searchText.filterStrings(stringData)
-        }
+        self.viewModel.addToStringData(text: text)
+        self.searchText.filterStrings(self.viewModel.stringData)
         self.searchText.resignFirstResponder()  //if desired
-
-        self.searchText.hideResultsList()
         self.viewModel.searchEverything(text: text)
+        self.searchText.hideResultsList()
 
     }
     
     // MARK: - private
     private func bindData() {
-        searchText.itemSelectionHandler = { (result,index) in
+        searchText.itemSelectionHandler = { [weak self](result,index) in
+            guard let self = self else { return }
             let item = result[index]
             self.searchText.text = item.title
-            self.searchText.resignFirstResponder()  //if desired
-            self.viewModel.searchEverything(text: self.searchText.text)
+            self.actionSearch(self)
         }
         self.viewModel.listArticles
             .subscribeOn(MainScheduler.instance)
@@ -94,7 +90,7 @@ class CustomNewsViewController: BaseViewController, UITextFieldDelegate {
     }
     private func setupData() {
         self.showLoading()
-        self.viewModel.searchEverything(text: self.searchText.text)
+        self.viewModel.getTopHeadlineData()
     }
     private func setupTableView() {
         tableView.delegate = self
@@ -108,14 +104,13 @@ class CustomNewsViewController: BaseViewController, UITextFieldDelegate {
         setupTableView()
         self.title = "Search Article"
         searchText.delegate = self
-        searchText.filterStrings(stringData)
+        searchText.filterStrings(self.viewModel.stringData)
         searchText.theme.bgColor = UIColor (red: 0.9, green: 0.9, blue: 0.9, alpha: 1)
         searchText.maxResultsListHeight = 160
+        searchText.startVisible = true
+
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-
-        //textField code
-        searchText.resignFirstResponder()  //if desired
         self.actionSearch(self)
         return true
     }

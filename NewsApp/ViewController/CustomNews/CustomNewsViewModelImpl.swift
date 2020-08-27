@@ -17,18 +17,48 @@ class CustomNewsViewModelImpl: NSObject, CustomNewsViewModel {
     let basicViewModel:BasicViewModel
     let endLoadingAnimation: PublishSubject<Void> = PublishSubject()
     let showToast: PublishSubject<String> = PublishSubject()
-
+    var stringData = ["bitcoin", "apple", "earthquake", "animal"]
+    
     init(basicViewModel:BasicViewModel = BasicViewModelImpl(),
          api: ProviderAPIBasic<APITarget> = ProviderAPIBasic<APITarget>()) {
         self.api = api
         self.basicViewModel = basicViewModel
 
     }
-    
+    func addToStringData(text: String) {
+        if !(stringData.contains(text)) {
+            stringData.append(text)
+        }
+    }
     func searchEverything(text: String?) {
-        let q = text == "" ? "\"\"" : text
-        let searchParams = SearchConditionsParams(category: nil, country: nil, language: nil, q: q)
+        guard let text = text, text != "" else {
+            getTopHeadlineData()
+            return
+        }
+        let searchParams = SearchConditionsParams(category: nil, country: nil, language: nil, q: text)
         api.request(.everything(searchParams: searchParams))
+            .filterSuccessfulStatusCodes()
+            .map(ArticleResponse.self, atKeyPath: nil, using: JSONDecoder.decoderISO8601DateAPI(), failsOnEmptyData: true)
+            .subscribe({[weak self] event in
+                guard let self = self else { return }
+                switch event {
+                case .success(let response):
+                    if let articles = response.articles {
+                        self.listArticles.accept(articles)
+                    }
+                    break
+                case .error(_):
+                    self.showToast.onNext("Load data fail")
+                    break
+                }
+                self.basicViewModel.showLoading.accept(false)
+                self.endLoadingAnimation.onNext(())
+            }).disposed(by: rx.disposeBag)
+    }
+    
+    func getTopHeadlineData() {
+        let searchParams = SearchConditionsParams(category: nil, country: "us", language: nil, q: nil)
+        api.request(.top_headlines(searchParams: searchParams))
             .filterSuccessfulStatusCodes()
             .map(ArticleResponse.self, atKeyPath: nil, using: JSONDecoder.decoderISO8601DateAPI(), failsOnEmptyData: true)
             .subscribe({[weak self] event in

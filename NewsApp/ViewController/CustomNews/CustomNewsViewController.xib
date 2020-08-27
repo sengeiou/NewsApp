@@ -43,7 +43,7 @@
                         <action selector="actionSearch:" destination="-1" eventType="touchUpInside" id="uxM-hL-mhJ"/>
                     </connections>
                 </button>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="bitcoin" borderStyle="roundedRect" placeholder="search text" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="dqr-qF-ieW" customClass="SearchTextField" customModule="SearchTextField">
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search text" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="dqr-qF-ieW" customClass="SearchTextField" customModule="SearchTextField">
                     <rect key="frame" x="20" y="49" width="296" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
